@@ -2386,8 +2386,9 @@
 
     <!-- INTERACTIVE LOGIC SCRIPT -->
     <script>
-      // Initialize Lucide Icons
-      lucide.createIcons();
+      function initInteractiveWorkspace() {
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
       // Initialize AOS Animate On Scroll Engine
       AOS.init({
@@ -3113,14 +3114,26 @@
         `;
       }
 
-      // Load custom projects and insert them into the gallery layout
-      function loadCustomProjects() {
-        const customProjects = JSON.parse(localStorage.getItem('engineering_custom_projects') || '[]');
+      // Load custom projects and insert them into the gallery layout (with real backend database fetching and fallback)
+      async function loadCustomProjects() {
         const galleryGrid = document.getElementById('gallery-grid');
         if (!galleryGrid) return;
 
         // Strip previous dynamic entries to avoid duplicating
         document.querySelectorAll('.custom-project-card').forEach(card => card.remove());
+
+        let customProjects = [];
+        try {
+          const res = await fetch('/api/projects');
+          if (res.ok) {
+            customProjects = await res.json();
+          } else {
+            throw new Error('Failed to fetch from backend');
+          }
+        } catch (err) {
+          console.warn('Using localStorage fallback for dynamic projects:', err);
+          customProjects = JSON.parse(localStorage.getItem('engineering_custom_projects') || '[]');
+        }
 
         customProjects.forEach(proj => {
           const cardEl = document.createElement('div');
@@ -3239,9 +3252,9 @@
         });
       }
 
-      // Handle form submission and storage save
+      // Handle form submission and storage save (fully integrated with backend API)
       if (addProjectForm) {
-        addProjectForm.addEventListener('submit', (e) => {
+        addProjectForm.addEventListener('submit', async (e) => {
           e.preventDefault();
 
           const titleVal = document.getElementById('p-title').value.trim();
@@ -3259,7 +3272,6 @@
           }
 
           const newProject = {
-            id: 'proj-' + Date.now(),
             title: titleVal,
             subtitle: subtitleVal,
             category: categoryVal,
@@ -3268,17 +3280,32 @@
             method: methodVal,
             material: materialVal,
             outcome: outcomeVal,
-            image: uploadedImageData,
-            timestamp: Date.now()
+            image: uploadedImageData
           };
 
-          // Save list to localStorage
-          const customProjects = JSON.parse(localStorage.getItem('engineering_custom_projects') || '[]');
-          customProjects.push(newProject);
-          localStorage.setItem('engineering_custom_projects', JSON.stringify(customProjects));
+          try {
+            const res = await fetch('/api/projects', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(newProject)
+            });
+            if (!res.ok) {
+              throw new Error('Server returned error status');
+            }
+          } catch (err) {
+            console.warn('Backend server unavailable, saving to localStorage fallback:', err);
+            const fallbackProject = {
+              id: 'proj-' + Date.now(),
+              ...newProject,
+              timestamp: Date.now()
+            };
+            const customProjects = JSON.parse(localStorage.getItem('engineering_custom_projects') || '[]');
+            customProjects.push(fallbackProject);
+            localStorage.setItem('engineering_custom_projects', JSON.stringify(customProjects));
+          }
 
           // Reload list and close form modal
-          loadCustomProjects();
+          await loadCustomProjects();
           closeAddProjectModal();
 
           // Smoothly trigger current active tab filter update
@@ -3289,10 +3316,16 @@
         });
       }
 
-      // Initialize any custom uploaded projects on boot
-      document.addEventListener('DOMContentLoaded', () => {
-        loadCustomProjects();
-      });
+      // Initialize the dynamic projects
+      loadCustomProjects();
+    }
+
+    // Bulletproof initialization that runs as soon as the DOM is fully parsed and available
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initInteractiveWorkspace);
+    } else {
+      initInteractiveWorkspace();
+    }
     </script>
 
     <!-- Technical Spec Sheet Modal Overlay -->
