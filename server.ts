@@ -1,5 +1,10 @@
 import express from "express";
 import path from "path";
+import * as dotenv from "dotenv";
+
+// Load environment variables from .env file before other imports
+dotenv.config();
+
 import { createServer as createViteServer } from "vite";
 import { getProjects, createProject } from "./src/db/queries.ts";
 

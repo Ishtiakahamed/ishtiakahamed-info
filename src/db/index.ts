@@ -5,11 +5,23 @@ import * as schema from "./schema.ts";
 const { Pool } = pg;
 
 export const createPool = () => {
+  const host = process.env.SQL_HOST;
+  const user = process.env.SQL_USER || process.env.SQL_ADMIN_USER;
+  const password = process.env.SQL_PASSWORD || process.env.SQL_ADMIN_PASSWORD;
+  const database = process.env.SQL_DB_NAME;
+
+  console.log("Initializing database pool:", {
+    host,
+    user,
+    database,
+    hasPassword: !!password
+  });
+
   return new Pool({
-    host: process.env.SQL_HOST,
-    user: process.env.SQL_USER,
-    password: process.env.SQL_PASSWORD,
-    database: process.env.SQL_DB_NAME,
+    host,
+    user,
+    password,
+    database,
     connectionTimeoutMillis: 15000,
   });
 };
