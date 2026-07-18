@@ -1544,6 +1544,588 @@
 
           </div>
 
+          <!-- Sub-section: Technical Drafting & Physical Model Gallery -->
+          <div class="mt-24 border-t border-white/5 pt-16">
+            
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6">
+              <div class="max-w-3xl">
+                <h3 data-aos="fade-up" class="font-display font-bold text-2xl sm:text-3xl text-white mb-2">
+                  Technical <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-300">Drafting & Model Gallery</span>
+                </h3>
+                <p class="text-xs text-cyan-400 font-mono tracking-widest uppercase font-bold">
+                  Visual representations of my AutoCAD drafting samples and physical engineering models.
+                </p>
+              </div>
+              
+              <!-- Tab Filtering Menu (Pure dynamic Tailwind design) -->
+              <div data-aos="fade-left" class="flex flex-wrap items-center gap-2 select-none">
+                <button data-filter-target="all" class="gallery-tab-btn active px-4 py-2 rounded-full text-[10px] font-display font-bold tracking-wider uppercase transition-all duration-300 select-none cursor-pointer border border-cyan-400/30 text-cyan-400 bg-cyan-400/10">
+                  All Samples
+                </button>
+                <button data-filter-target="autocad" class="gallery-tab-btn px-4 py-2 rounded-full text-[10px] font-display font-bold tracking-wider uppercase transition-all duration-300 select-none cursor-pointer border border-white/5 text-lightGray hover:border-cyan-400/20 hover:text-white bg-transparent">
+                  AutoCAD Blueprints
+                </button>
+                <button data-filter-target="physical" class="gallery-tab-btn px-4 py-2 rounded-full text-[10px] font-display font-bold tracking-wider uppercase transition-all duration-300 select-none cursor-pointer border border-white/5 text-lightGray hover:border-cyan-400/20 hover:text-white bg-transparent">
+                  Physical Models
+                </button>
+                <button id="add-project-btn" class="px-4 py-2 rounded-full text-[10px] font-display font-bold tracking-wider uppercase transition-all duration-300 select-none cursor-pointer border border-cyan-400 bg-cyan-400 text-[#030712] hover:bg-transparent hover:text-cyan-400 font-extrabold flex items-center gap-1.5 shadow-lg shadow-cyan-400/10 hover:shadow-none">
+                  <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Add Project
+                </button>
+              </div>
+            </div>
+
+            <!-- Gallery Grid (6 interactive spec-cards) -->
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <!-- Card 1: 2D Floor Plan Blueprint -->
+              <div data-aos="zoom-in" data-gallery-type="autocad"
+                data-spec-title="2D Residential Floor Plan"
+                data-spec-badge="AutoCAD Drafting"
+                data-spec-badge-style="text-cyan-400 bg-cyan-600/10 border border-cyan-500/15"
+                data-spec-subtitle="AutoCAD 2D Drafting & Partitioning"
+                data-spec-description="Comprehensive 2D residential floor plan layout draft focusing on architectural partitioning, multi-layered drawing structures, precise wall offsets, custom hatch applications, and integrated dimension styles. This layout showcases proper structural space management and drafting standards compliant with civil architectural requirements."
+                data-spec-scale="Scale: 1/4&quot; = 1'-0&quot;"
+                data-spec-method="Multi-Layer CAD Drafting"
+                data-spec-material="CAD Layers, Hatching Pattern"
+                data-spec-outcome="Mastered plan detailing and offset dimension styles"
+                class="gallery-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300">
+                
+                <div class="relative w-full overflow-hidden">
+                  <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#030712] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+                    <!-- Blueprint Grid -->
+                    <defs>
+                      <pattern id="blueprint-grid-1" width="16" height="16" patternUnits="userSpaceOnUse">
+                        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#22d3ee" stroke-width="0.3" stroke-opacity="0.12" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#blueprint-grid-1)" />
+                    
+                    <!-- Outer boundary of floor plan -->
+                    <rect x="30" y="20" width="260" height="130" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.8" />
+                    <rect x="33" y="23" width="254" height="124" fill="none" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.4" />
+                    
+                    <!-- Interior partitions (walls) -->
+                    <line x1="150" y1="20" x2="150" y2="100" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.8" />
+                    <line x1="150" y1="100" x2="290" y2="100" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.8" />
+                    <line x1="210" y1="100" x2="210" y2="150" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.8" />
+                    
+                    <!-- Door openings & swings -->
+                    <path d="M 60 20 A 30 30 0 0 1 30 50" fill="none" stroke="#c084fc" stroke-width="1.2" stroke-dasharray="2,2" />
+                    <line x1="30" y1="50" x2="30" y2="20" stroke="#c084fc" stroke-width="1.5" />
+                    <path d="M 150 70 A 20 20 0 0 0 130 90" fill="none" stroke="#c084fc" stroke-width="1.2" stroke-dasharray="2,2" />
+                    <line x1="130" y1="90" x2="150" y2="90" stroke="#c084fc" stroke-width="1.5" />
+                    
+                    <!-- Stairs -->
+                    <g stroke="#22d3ee" stroke-opacity="0.6" stroke-width="0.8">
+                      <line x1="35" y1="110" x2="105" y2="110" />
+                      <line x1="35" y1="118" x2="105" y2="118" />
+                      <line x1="35" y1="126" x2="105" y2="126" />
+                      <line x1="35" y1="134" x2="105" y2="134" />
+                      <line x1="35" y1="142" x2="105" y2="142" />
+                      <line x1="70" y1="110" x2="70" y2="150" />
+                    </g>
+                    <path d="M 50 145 L 50 120 L 47 125 M 50 120 L 53 125" fill="none" stroke="#c084fc" stroke-width="1" />
+                    
+                    <!-- Labels -->
+                    <text x="90" y="65" font-family="'Space Mono', monospace" font-size="9" fill="#22d3ee" font-weight="bold" fill-opacity="0.8" text-anchor="middle">BEDROOM</text>
+                    <text x="210" y="65" font-family="'Space Mono', monospace" font-size="9" fill="#22d3ee" font-weight="bold" fill-opacity="0.8" text-anchor="middle">LIVING AREA</text>
+                    <text x="250" y="125" font-family="'Space Mono', monospace" font-size="7" fill="#a78bfa" fill-opacity="0.8" text-anchor="middle">KITCHEN</text>
+                    <text x="175" y="125" font-family="'Space Mono', monospace" font-size="7" fill="#a78bfa" fill-opacity="0.8" text-anchor="middle">BATH</text>
+                    
+                    <!-- Dimension lines and texts -->
+                    <g stroke="#a78bfa" stroke-opacity="0.5" stroke-width="0.5">
+                      <line x1="15" y1="20" x2="15" y2="150" />
+                      <line x1="12" y1="20" x2="18" y2="20" />
+                      <line x1="12" y1="150" x2="18" y2="150" />
+                      <line x1="30" y1="162" x2="290" y2="162" />
+                      <line x1="30" y1="159" x2="30" y2="165" />
+                      <line x1="290" y1="159" x2="290" y2="165" />
+                    </g>
+                    <text x="10" y="90" font-family="'Space Mono', monospace" font-size="6" fill="#a78bfa" font-weight="bold" transform="rotate(-90,10,90)" text-anchor="middle">32' - 6"</text>
+                    <text x="160" y="170" font-family="'Space Mono', monospace" font-size="6" fill="#a78bfa" font-weight="bold" text-anchor="middle">65' - 0"</text>
+                    
+                    <!-- Compass Arrow -->
+                    <circle cx="270" cy="40" r="12" fill="none" stroke="#22d3ee" stroke-opacity="0.4" stroke-width="0.8" />
+                    <path d="M 270 24 L 274 36 L 270 33 L 266 36 Z" fill="#22d3ee" fill-opacity="0.8" />
+                    <text x="270" y="18" font-family="'Space Mono', monospace" font-size="7" fill="#22d3ee" font-weight="bold" text-anchor="middle">N</text>
+                    
+                    <!-- Blueprint Title block -->
+                    <rect x="230" y="138" width="55" height="10" fill="#040815" stroke="#22d3ee" stroke-opacity="0.4" stroke-width="0.5" />
+                    <text x="257" y="145" font-family="'Space Mono', monospace" font-size="5" fill="#22d3ee" font-weight="bold" text-anchor="middle">PLAN 2D - SEC A</text>
+                  </svg>
+                  
+                  <div class="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                    <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-cyan-400/30 text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest">Open Specs Sheet</span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[9px] font-mono tracking-wider text-cyan-400 font-bold uppercase bg-cyan-600/10 border border-cyan-500/15 px-2.5 py-1 rounded">AutoCAD Drafting</span>
+                      <i data-lucide="compass" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-cyan-400 transition-colors"></i>
+                    </div>
+                    <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-cyan-300 transition-colors">2D Residential Floor Plan</h4>
+                    <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                      Multi-layered architectural design showcasing precise wall partitioning, staircases, dynamic door swings, and dimension standards.
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                    <span>CAD Profile</span>
+                    <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Column Reinforcement Detailing Blueprint -->
+              <div data-aos="zoom-in" data-gallery-type="autocad"
+                data-spec-title="Column Reinforcement Details"
+                data-spec-badge="Structural Detailing"
+                data-spec-badge-style="text-cyan-400 bg-cyan-600/10 border border-cyan-500/15"
+                data-spec-subtitle="AutoCAD Structural Cross Section"
+                data-spec-description="Cross-sectional detail schematic of a reinforced concrete column assembly. Highlights detailed tie configurations, primary steel reinforcement bars layout, concrete clear cover spacing dimensions, and custom corner hook angles. Perfected structural detailing practices with clear text leader lines and structural schedules."
+                data-spec-scale="Scale: 1:10 (300mm x 400mm)"
+                data-spec-method="Structural Detailing / AutoCAD 2D"
+                data-spec-material="Concrete & Reinforcing Steel Symbols"
+                data-spec-outcome="Understood reinforcement bar distribution & schedules"
+                class="gallery-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300">
+                
+                <div class="relative w-full overflow-hidden">
+                  <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#030712] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+                    <!-- Blueprint Grid -->
+                    <defs>
+                      <pattern id="blueprint-grid-2" width="16" height="16" patternUnits="userSpaceOnUse">
+                        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#22d3ee" stroke-width="0.3" stroke-opacity="0.12" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#blueprint-grid-2)" />
+                    
+                    <!-- Column Outer Concrete Boundary -->
+                    <rect x="95" y="30" width="130" height="120" rx="4" ry="4" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-opacity="0.8" />
+                    <rect x="98" y="33" width="124" height="114" rx="2" ry="2" fill="none" stroke="#22d3ee" stroke-width="0.5" stroke-opacity="0.4" stroke-dasharray="2,2" />
+                    
+                    <!-- Outer Stirrup/Tie ring -->
+                    <rect x="107" y="42" width="106" height="96" rx="6" ry="6" fill="none" stroke="#c084fc" stroke-width="1.2" />
+                    <!-- Corner hook -->
+                    <path d="M 107 48 L 115 56 M 107 48 L 107 58 M 107 48 L 117 48" fill="none" stroke="#c084fc" stroke-width="1.2" />
+                    
+                    <!-- Main Reinforcing Bars (Rebars) -->
+                    <circle cx="112" cy="47" r="6.5" fill="#f43f5e" stroke="#fff" stroke-width="0.5" />
+                    <circle cx="208" cy="47" r="6.5" fill="#f43f5e" stroke="#fff" stroke-width="0.5" />
+                    <circle cx="112" cy="133" r="6.5" fill="#f43f5e" stroke="#fff" stroke-width="0.5" />
+                    <circle cx="208" cy="133" r="6.5" fill="#f43f5e" stroke="#fff" stroke-width="0.5" />
+                    <circle cx="160" cy="47" r="6.5" fill="#f43f5e" stroke="#fff" stroke-width="0.5" />
+                    <circle cx="160" cy="133" r="6.5" fill="#f43f5e" stroke="#fff" stroke-width="0.5" />
+                    
+                    <!-- Concrete Dots -->
+                    <g fill="#22d3ee" fill-opacity="0.25">
+                      <circle cx="130" cy="70" r="1" /><circle cx="180" cy="75" r="0.8" /><circle cx="140" cy="110" r="1.2" />
+                      <circle cx="190" cy="100" r="0.8" /><circle cx="160" cy="85" r="1" /><circle cx="120" cy="95" r="0.8" />
+                    </g>
+                    
+                    <!-- Leaders -->
+                    <path d="M 112 47 L 70 47 L 55 60" fill="none" stroke="#22d3ee" stroke-width="0.8" />
+                    <circle cx="112" cy="47" r="1.5" fill="#22d3ee" />
+                    <text x="50" y="72" font-family="'Space Mono', monospace" font-size="6" fill="#22d3ee" font-weight="bold" text-anchor="middle">6-Ø16mm BARS</text>
+                    
+                    <path d="M 150 42 L 150 15 L 180 15" fill="none" stroke="#c084fc" stroke-width="0.8" />
+                    <circle cx="150" cy="42" r="1.5" fill="#c084fc" />
+                    <text x="185" y="18" font-family="'Space Mono', monospace" font-size="6" fill="#c084fc" font-weight="bold" text-anchor="start">TIES: Ø10mm @ 150 c/c</text>
+                    
+                    <!-- Cover -->
+                    <path d="M 95 90 L 107 90" stroke="#f59e0b" stroke-width="0.8" />
+                    <line x1="95" y1="87" x2="95" y2="93" stroke="#f59e0b" stroke-width="0.8" />
+                    <line x1="107" y1="87" x2="107" y2="93" stroke="#f59e0b" stroke-width="0.8" />
+                    <text x="101" y="83" font-family="'Space Mono', monospace" font-size="5" fill="#f59e0b" font-weight="bold" text-anchor="middle">40mm</text>
+                    
+                    <!-- Outer dimensions -->
+                    <g stroke="#a78bfa" stroke-opacity="0.6" stroke-width="0.8">
+                      <line x1="95" y1="160" x2="225" y2="160" />
+                      <line x1="95" y1="156" x2="95" y2="164" />
+                      <line x1="225" y1="156" x2="225" y2="164" />
+                      <line x1="245" y1="30" x2="245" y2="150" />
+                      <line x1="241" y1="30" x2="249" y2="30" />
+                      <line x1="241" y1="150" x2="249" y2="150" />
+                    </g>
+                    <text x="160" y="170" font-family="'Space Mono', monospace" font-size="6" fill="#a78bfa" font-weight="bold" text-anchor="middle">300 mm</text>
+                    <text x="254" y="90" font-family="'Space Mono', monospace" font-size="6" fill="#a78bfa" font-weight="bold" transform="rotate(90,254,90)" text-anchor="middle">400 mm</text>
+                  </svg>
+                  
+                  <div class="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                    <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-cyan-400/30 text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest">Open Specs Sheet</span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[9px] font-mono tracking-wider text-cyan-400 font-bold uppercase bg-cyan-600/10 border border-cyan-500/15 px-2.5 py-1 rounded">Structural Detailing</span>
+                      <i data-lucide="layers" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-cyan-400 transition-colors"></i>
+                    </div>
+                    <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-cyan-300 transition-colors">Column Reinforcement Details</h4>
+                    <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                      Structural column schedule cross-section detail detailing tie hooks, clear concrete cover, longitudinal rebars, and schedules.
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                    <span>CAD Profile</span>
+                    <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Pratt Truss Elevation Blueprint -->
+              <div data-aos="zoom-in" data-gallery-type="autocad"
+                data-spec-title="Pratt Steel Roof Truss"
+                data-spec-badge="AutoCAD 3D Profile"
+                data-spec-badge-style="text-cyan-400 bg-cyan-600/10 border border-cyan-500/15"
+                data-spec-subtitle="Industrial Pratt Truss Profile"
+                data-spec-description="Technical structural layout of a Pratt roof truss profile. Explores steel truss joints (gusset plates), structural chord dimensioning, member sizing annotations, weld patterns, and sloped profile members designed to withstand heavy loads. Demonstrates precision scales and geometric drafting accuracy in steel frame civil structures."
+                data-spec-scale="Span: 12.0m / Height: 3.5m"
+                data-spec-method="AutoCAD Geometric Drafting"
+                data-spec-material="Structural Steel Truss Representation"
+                data-spec-outcome="Improved precision in truss geometry and joint offsets"
+                class="gallery-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300">
+                
+                <div class="relative w-full overflow-hidden">
+                  <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#030712] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+                    <!-- Blueprint Grid -->
+                    <defs>
+                      <pattern id="blueprint-grid-3" width="16" height="16" patternUnits="userSpaceOnUse">
+                        <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#22d3ee" stroke-width="0.3" stroke-opacity="0.12" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#blueprint-grid-3)" />
+                    
+                    <!-- Supports -->
+                    <polygon points="35,130 45,130 40,120" fill="none" stroke="#f59e0b" stroke-width="1.2" />
+                    <circle cx="280" cy="125" r="4.5" fill="none" stroke="#f59e0b" stroke-width="1" />
+                    <line x1="274" y1="130" x2="286" y2="130" stroke="#f59e0b" stroke-width="1" />
+                    
+                    <!-- Bottom Chord -->
+                    <line x1="40" y1="120" x2="280" y2="120" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" />
+                    
+                    <!-- Sloped Top Chords -->
+                    <line x1="40" y1="120" x2="160" y2="50" stroke="#22d3ee" stroke-width="2.5" />
+                    <line x1="280" y1="120" x2="160" y2="50" stroke="#22d3ee" stroke-width="2.5" />
+                    
+                    <!-- Verticals -->
+                    <line x1="88" y1="120" x2="88" y2="92" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="136" y1="120" x2="136" y2="64" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="160" y1="120" x2="160" y2="50" stroke="#22d3ee" stroke-width="2.2" />
+                    <line x1="184" y1="120" x2="184" y2="64" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="232" y1="120" x2="232" y2="92" stroke="#c084fc" stroke-width="1.5" />
+                    
+                    <!-- Diagonals -->
+                    <line x1="40" y1="120" x2="88" y2="92" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="88" y1="92" x2="136" y2="120" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="136" y1="64" x2="160" y2="120" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="184" y1="64" x2="160" y2="120" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="184" y1="64" x2="232" y2="120" stroke="#c084fc" stroke-width="1.5" />
+                    <line x1="232" y1="92" x2="280" y2="120" stroke="#c084fc" stroke-width="1.5" />
+                    
+                    <!-- Nodes -->
+                    <g fill="#030712" stroke="#22d3ee" stroke-width="1">
+                      <circle cx="40" cy="120" r="3.5" /><circle cx="88" cy="120" r="3" /><circle cx="136" cy="120" r="3" />
+                      <circle cx="160" cy="120" r="3" /><circle cx="184" cy="120" r="3" /><circle cx="232" cy="120" r="3" />
+                      <circle cx="280" cy="120" r="3.5" /><circle cx="88" cy="92" r="3" /><circle cx="136" cy="64" r="3" />
+                      <circle cx="160" cy="50" r="3.5" /><circle cx="184" cy="64" r="3" /><circle cx="232" cy="92" r="3" />
+                    </g>
+                    
+                    <!-- Angle -->
+                    <path d="M 40 120 L 70 120 A 30 30 0 0 0 64 106 Z" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-width="0.5" />
+                    <text x="73" y="116" font-family="'Space Mono', monospace" font-size="6" fill="#22d3ee" font-weight="bold">30.3°</text>
+                    
+                    <!-- Dimensions -->
+                    <g stroke="#a78bfa" stroke-opacity="0.6" stroke-width="0.8">
+                      <line x1="40" y1="145" x2="280" y2="145" />
+                      <line x1="40" y1="141" x2="40" y2="149" />
+                      <line x1="280" y1="141" x2="280" y2="149" />
+                      <line x1="300" y1="50" x2="300" y2="120" />
+                      <line x1="296" y1="50" x2="304" y2="50" />
+                      <line x1="296" y1="120" x2="304" y2="120" />
+                    </g>
+                    <text x="160" y="155" font-family="'Space Mono', monospace" font-size="6" fill="#a78bfa" font-weight="bold" text-anchor="middle">SPAN L = 12.0m</text>
+                    <text x="309" y="85" font-family="'Space Mono', monospace" font-size="6" fill="#a78bfa" font-weight="bold" transform="rotate(90,309,85)" text-anchor="middle">H = 3.5m</text>
+                    <text x="160" y="32" font-family="'Space Mono', monospace" font-size="8" fill="#22d3ee" font-weight="bold" text-anchor="middle">PRATT ROOF TRUSS</text>
+                  </svg>
+                  
+                  <div class="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                    <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-cyan-400/30 text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest">Open Specs Sheet</span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[9px] font-mono tracking-wider text-cyan-400 font-bold uppercase bg-cyan-600/10 border border-cyan-500/15 px-2.5 py-1 rounded">AutoCAD 3D Profile</span>
+                      <i data-lucide="compass" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-cyan-400 transition-colors"></i>
+                    </div>
+                    <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-cyan-300 transition-colors">Pratt Steel Roof Truss</h4>
+                    <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                      Industrial Pratt-style steel roof truss outline mapping slope coefficients, gusset plate nodes, span and height ratios.
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                    <span>CAD Profile</span>
+                    <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Physical Balsa Wood Truss Bridge Model -->
+              <div data-aos="zoom-in" data-gallery-type="physical"
+                data-spec-title="Balsa Wood Bridge Model"
+                data-spec-badge="Physical Model / Craft"
+                data-spec-badge-style="text-violet-400 bg-[#7C3AED]/10 border border-[#7C3AED]/15"
+                data-spec-subtitle="Structural Load & Deflection Test"
+                data-spec-description="Hand-crafted scaled physical structural model of a bridge truss constructed from grade-A balsa wood. Tested under a static central point load of 45kg to analyze structural joints tension, member deflection under stress, load-bearing limitations, and ultimate failure thresholds. Highlights hand-scale civil prototyping precision."
+                data-spec-scale="Scale: 1:30 (Span = 60cm)"
+                data-spec-method="Structural Analysis & Load Testing"
+                data-spec-material="Balsa Wood, Epoxy Jointing"
+                data-spec-outcome="Practical understanding of structural shear stress & compression"
+                class="gallery-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300">
+                
+                <div class="relative w-full overflow-hidden">
+                  <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#05070f] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+                    <defs>
+                      <pattern id="model-grid-1" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="0.8" fill="#7c3aed" fill-opacity="0.18" />
+                      </pattern>
+                      <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f59e0b" />
+                        <stop offset="100%" stop-color="#d97706" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#model-grid-1)" />
+                    
+                    <g transform="translate(10, 10)">
+                      <!-- Back truss -->
+                      <path d="M 40,110 L 140,60 L 240,110 Z" fill="none" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="3" stroke-linejoin="round" />
+                      <line x1="40" y1="110" x2="240" y2="110" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="3" />
+                      <line x1="90" y1="110" x2="90" y2="85" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="2" />
+                      <line x1="140" y1="110" x2="140" y2="60" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="2.5" />
+                      <line x1="190" y1="110" x2="190" y2="85" stroke="#7c3aed" stroke-opacity="0.35" stroke-width="2" />
+                      
+                      <!-- Connections -->
+                      <g stroke="#22d3ee" stroke-opacity="0.5" stroke-width="1.5">
+                        <line x1="40" y1="110" x2="20" y2="125" />
+                        <line x1="90" y1="110" x2="70" y2="125" />
+                        <line x1="140" y1="110" x2="120" y2="125" />
+                        <line x1="190" y1="110" x2="170" y2="125" />
+                        <line x1="240" y1="110" x2="220" y2="125" />
+                        <line x1="140" y1="60" x2="120" y2="72" />
+                      </g>
+                      
+                      <!-- Front truss -->
+                      <path d="M 20,125 L 120,72 L 220,125 Z" fill="none" stroke="url(#woodGrad)" stroke-width="4.5" stroke-linejoin="round" />
+                      <line x1="20" y1="125" x2="220" y2="125" stroke="url(#woodGrad)" stroke-width="4.5" />
+                      <g stroke="url(#woodGrad)" stroke-width="3">
+                        <line x1="70" y1="125" x2="70" y2="98" />
+                        <line x1="120" y1="125" x2="120" y2="72" />
+                        <line x1="170" y1="125" x2="170" y2="98" />
+                        <line x1="20" y1="125" x2="70" y2="98" />
+                        <line x1="70" y1="98" x2="120" y2="125" />
+                        <line x1="120" y1="72" x2="170" y2="125" />
+                        <line x1="170" y1="98" x2="220" y2="125" />
+                      </g>
+                      
+                      <!-- Pins -->
+                      <g fill="#3b82f6" stroke="#fff" stroke-width="0.5">
+                        <circle cx="20" cy="125" r="3.5" /><circle cx="70" cy="125" r="3" /><circle cx="120" cy="125" r="3.5" />
+                        <circle cx="170" cy="125" r="3" /><circle cx="220" cy="125" r="3.5" /><circle cx="70" cy="98" r="3" />
+                        <circle cx="120" cy="72" r="3.5" /><circle cx="170" cy="98" r="3" />
+                      </g>
+                      
+                      <!-- Load Arrow -->
+                      <g transform="translate(120, 125)">
+                        <path d="M 0,-40 L 0,-15" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="2,2" />
+                        <path d="M 0,0 L 0,25" fill="none" stroke="#f43f5e" stroke-width="2.5" />
+                        <path d="M 0,25 L -5,17 M 0,25 L 5,17" fill="none" stroke="#f43f5e" stroke-width="2" />
+                        <text x="8" y="20" font-family="'Space Mono', monospace" font-size="7" fill="#f43f5e" font-weight="bold">LOAD: 45 kg</text>
+                      </g>
+                    </g>
+                    <text x="20" y="32" font-family="'Space Mono', monospace" font-size="8" fill="#f59e0b" font-weight="bold">BALSA WOOD STRUCTURAL</text>
+                  </svg>
+                  
+                  <div class="absolute inset-0 bg-[#7C3AED]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                    <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-[#7C3AED]/30 text-[10px] font-mono font-bold text-violet-400 uppercase tracking-widest">Open Specs Sheet</span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[9px] font-mono tracking-wider text-violet-400 font-bold uppercase bg-[#7C3AED]/10 border border-[#7C3AED]/15 px-2.5 py-1 rounded">Physical Model / Craft</span>
+                      <i data-lucide="box" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-violet-400 transition-colors"></i>
+                    </div>
+                    <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-violet-300 transition-colors">Balsa Wood Bridge Model</h4>
+                    <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                      Hand-scale physical truss bridge model constructed with premium balsa members, stress-tested up to 45kg structural loads.
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                    <span>Physical Maquette</span>
+                    <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5: Concrete Column-Beam Assembly Model -->
+              <div data-aos="zoom-in" data-gallery-type="physical"
+                data-spec-title="Beam-Column Joint Model"
+                data-spec-badge="Scaled Prototyping"
+                data-spec-badge-style="text-violet-400 bg-[#7C3AED]/10 border border-[#7C3AED]/15"
+                data-spec-subtitle="2-Story Structural Frame Model"
+                data-spec-description="A detailed physical structural mockup representation of concrete beam-column-foundation joints assembly. Modeled on a 1:20 scale, demonstrating load transfers, vertical column distributions, moment rigid connections, and horizontal structural concrete slab alignments."
+                data-spec-scale="Scale: 1:20 (Height = 45cm)"
+                data-spec-method="Joint Rigidity & Scale Assembly"
+                data-spec-material="Molded Resin, Acrylic Base Plates"
+                data-spec-outcome="Observed behavior of high-stress joints under simulated horizontal shear forces"
+                class="gallery-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300">
+                
+                <div class="relative w-full overflow-hidden">
+                  <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#05070f] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+                    <defs>
+                      <pattern id="model-grid-2" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="0.8" fill="#7c3aed" fill-opacity="0.18" />
+                      </pattern>
+                      <linearGradient id="greyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#94a3b8" />
+                        <stop offset="100%" stop-color="#475569" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#model-grid-2)" />
+                    
+                    <g transform="translate(50, 20)">
+                      <polygon points="10,130 130,110 210,130 90,150" fill="#334155" fill-opacity="0.25" stroke="#475569" stroke-width="0.8" />
+                      
+                      <!-- Ground level columns -->
+                      <line x1="45" y1="120" x2="45" y2="75" stroke="#1e293b" stroke-width="4.5" />
+                      <line x1="45" y1="120" x2="45" y2="75" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="1.2" />
+                      <line x1="155" y1="115" x2="155" y2="70" stroke="#1e293b" stroke-width="4.5" />
+                      <line x1="155" y1="115" x2="155" y2="70" stroke="#38bdf8" stroke-opacity="0.8" stroke-width="1.2" />
+                      <line x1="65" y1="138" x2="65" y2="93" stroke="url(#greyGrad)" stroke-width="6" />
+                      <line x1="65" y1="138" x2="65" y2="93" stroke="#22d3ee" stroke-width="1.5" />
+                      <line x1="175" y1="130" x2="175" y2="85" stroke="url(#greyGrad)" stroke-width="6" />
+                      <line x1="175" y1="130" x2="175" y2="85" stroke="#22d3ee" stroke-width="1.5" />
+                      
+                      <!-- Beams Level 1 -->
+                      <polygon points="45,75 155,70 175,85 65,93" fill="none" stroke="url(#greyGrad)" stroke-width="4" stroke-linejoin="round" />
+                      <polygon points="45,75 155,70 175,85 65,93" fill="none" stroke="#22d3ee" stroke-width="1" />
+                      
+                      <!-- Level 2 columns -->
+                      <line x1="45" y1="75" x2="45" y2="35" stroke="#1e293b" stroke-width="3.5" />
+                      <line x1="45" y1="75" x2="45" y2="35" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="0.8" />
+                      <line x1="155" y1="70" x2="155" y2="30" stroke="#1e293b" stroke-width="3.5" />
+                      <line x1="155" y1="70" x2="155" y2="30" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="0.8" />
+                      <line x1="65" y1="93" x2="65" y2="50" stroke="url(#greyGrad)" stroke-width="5" />
+                      <line x1="65" y1="93" x2="65" y2="50" stroke="#22d3ee" stroke-width="1" />
+                      <line x1="175" y1="85" x2="175" y2="42" stroke="url(#greyGrad)" stroke-width="5" />
+                      <line x1="175" y1="85" x2="175" y2="42" stroke="#22d3ee" stroke-width="1" />
+                      
+                      <!-- Roof Beams -->
+                      <polygon points="45,35 155,30 175,42 65,50" fill="none" stroke="url(#greyGrad)" stroke-width="3" stroke-linejoin="round" />
+                      <polygon points="45,35 155,30 175,42 65,50" fill="none" stroke="#22d3ee" stroke-width="0.8" />
+                    </g>
+                    <text x="20" y="32" font-family="'Space Mono', monospace" font-size="8" fill="#94a3b8" font-weight="bold">CONCRETE FRAME MODEL</text>
+                  </svg>
+                  
+                  <div class="absolute inset-0 bg-[#7C3AED]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                    <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-[#7C3AED]/30 text-[10px] font-mono font-bold text-violet-400 uppercase tracking-widest">Open Specs Sheet</span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[9px] font-mono tracking-wider text-violet-400 font-bold uppercase bg-[#7C3AED]/10 border border-[#7C3AED]/15 px-2.5 py-1 rounded">Scaled Prototyping</span>
+                      <i data-lucide="box" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-violet-400 transition-colors"></i>
+                    </div>
+                    <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-violet-300 transition-colors">Beam-Column Joint Model</h4>
+                    <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                      Two-story structural concrete frame maquette modeling column alignments, horizontal beams, foundations, and rigid joints.
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                    <span>Physical Maquette</span>
+                    <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6: Topographic site terrain model -->
+              <div data-aos="zoom-in" data-gallery-type="physical"
+                data-spec-title="Contour Site Terrain Model"
+                data-spec-badge="Contour Mapping"
+                data-spec-badge-style="text-violet-400 bg-[#7C3AED]/10 border border-[#7C3AED]/15"
+                data-spec-subtitle="Topographic Landscape Layering"
+                data-spec-description="Detailed topographic contour model crafted by layering high-density foam boards. Translates concentric 2D survey contour lines into layered 3D physical steps with standard height metrics (+5.0m intervals). Highlights terrain gradient slopes and foundation site suitability analyzes."
+                data-spec-scale="Interval: +5.0m (Layers = 8)"
+                data-spec-method="Concentric Layer Stacking"
+                data-spec-material="Foam Board, High-Density Styrene"
+                data-spec-outcome="Learned 3D contour mapping translation from engineering site surveys"
+                class="gallery-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300">
+                
+                <div class="relative w-full overflow-hidden">
+                  <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#05070f] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+                    <defs>
+                      <pattern id="model-grid-3" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="20" cy="20" r="0.8" fill="#7c3aed" fill-opacity="0.18" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#model-grid-3)" />
+                    
+                    <path d="M 30,130 C 60,110 110,140 160,135 C 210,130 250,150 280,120 L 280,150 L 30,150 Z" fill="#7c3aed" fill-opacity="0.1" stroke="#7c3aed" stroke-opacity="0.3" stroke-width="1" />
+                    <path d="M 40,110 C 80,95 100,125 150,110 C 200,95 230,125 270,100" fill="none" stroke="#22d3ee" stroke-opacity="0.8" stroke-width="1.8" />
+                    <path d="M 60,90 C 95,80 120,105 160,90 C 200,75 220,105 250,85" fill="none" stroke="#c084fc" stroke-opacity="0.8" stroke-width="1.5" />
+                    <path d="M 80,75 C 110,65 130,85 170,72 C 200,60 210,85 230,70" fill="none" stroke="#fb7185" stroke-opacity="0.8" stroke-width="1.2" />
+                    
+                    <text x="90" y="103" font-family="'Space Mono', monospace" font-size="5.5" fill="#22d3ee" font-weight="bold" transform="rotate(-15,90,103)">+105.0m</text>
+                    <text x="105" y="83" font-family="'Space Mono', monospace" font-size="5.5" fill="#c084fc" font-weight="bold" transform="rotate(-12,105,83)">+110.0m</text>
+                    <text x="120" y="68" font-family="'Space Mono', monospace" font-size="5.5" fill="#fb7185" font-weight="bold" transform="rotate(-10,120,68)">+115.0m</text>
+                    
+                    <g transform="translate(230, 110)">
+                      <polygon points="0,20 40,10 80,20 40,30" fill="#7c3aed" fill-opacity="0.1" stroke="#7c3aed" stroke-opacity="0.4" stroke-width="0.8" />
+                      <polygon points="10,15 45,7 70,15 40,23" fill="#c084fc" fill-opacity="0.15" stroke="#c084fc" stroke-opacity="0.5" stroke-width="0.8" />
+                      <polygon points="20,10 45,5 60,10 40,15" fill="#fb7185" fill-opacity="0.2" stroke="#fb7185" stroke-opacity="0.6" stroke-width="0.8" />
+                      <line x1="40" y1="30" x2="40" y2="15" stroke="#fff" stroke-opacity="0.2" stroke-dasharray="1,1" stroke-width="0.8" />
+                    </g>
+                    <text x="20" y="32" font-family="'Space Mono', monospace" font-size="8" fill="#22d3ee" font-weight="bold">TOPOGRAPHIC SITE MODEL</text>
+                  </svg>
+                  
+                  <div class="absolute inset-0 bg-[#7C3AED]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                    <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-[#7C3AED]/30 text-[10px] font-mono font-bold text-violet-400 uppercase tracking-widest">Open Specs Sheet</span>
+                  </div>
+                </div>
+
+                <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+                  <div class="flex flex-col gap-1.5">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[9px] font-mono tracking-wider text-violet-400 font-bold uppercase bg-[#7C3AED]/10 border border-[#7C3AED]/15 px-2.5 py-1 rounded">Contour Mapping</span>
+                      <i data-lucide="layers" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-violet-400 transition-colors"></i>
+                    </div>
+                    <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-violet-300 transition-colors">Contour Site Terrain Model</h4>
+                    <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                      Precision physical site elevation contour model made of stacked foam boards demonstrating landscape slopes and heights.
+                    </p>
+                  </div>
+                  
+                  <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                    <span>Physical Maquette</span>
+                    <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -2261,6 +2843,620 @@
           });
         }
       }
+
+      // 4. Technical Spec Sheet Modal Interactivity
+      const modalElement = document.getElementById('tech-modal');
+      const modalCloseBtn = document.getElementById('modal-close-btn');
+
+      function openModal(card) {
+        if (!modalElement) return;
+        
+        // Extract specifications from card data attributes
+        const title = card.getAttribute('data-spec-title');
+        const badgeText = card.getAttribute('data-spec-badge');
+        const badgeStyle = card.getAttribute('data-spec-badge-style');
+        const subtitle = card.getAttribute('data-spec-subtitle');
+        const description = card.getAttribute('data-spec-description');
+        const scale = card.getAttribute('data-spec-scale');
+        const method = card.getAttribute('data-spec-method');
+        const material = card.getAttribute('data-spec-material');
+        const outcome = card.getAttribute('data-spec-outcome');
+        
+        // Clone and configure the SVG vector representation or image element
+        const originalSvg = card.querySelector('svg');
+        const originalImg = card.querySelector('img');
+        const visualContainer = document.getElementById('modal-visual-container');
+        
+        if (visualContainer) {
+          visualContainer.innerHTML = '';
+          if (originalSvg) {
+            const svgClone = originalSvg.cloneNode(true);
+            svgClone.setAttribute('class', 'w-full h-auto max-h-[50vh] drop-shadow-2xl');
+            svgClone.removeAttribute('viewBox');
+            svgClone.setAttribute('viewBox', '0 0 320 180');
+            visualContainer.appendChild(svgClone);
+          } else if (originalImg) {
+            const imgClone = originalImg.cloneNode(true);
+            imgClone.setAttribute('class', 'w-full h-auto max-h-[50vh] rounded-xl object-contain drop-shadow-2xl');
+            visualContainer.appendChild(imgClone);
+          }
+        }
+        
+        // Populate spec text nodes safely
+        const titleEl = document.getElementById('modal-title');
+        if (titleEl) titleEl.textContent = title;
+        
+        const badgeEl = document.getElementById('modal-type-badge');
+        if (badgeEl) {
+          badgeEl.textContent = badgeText;
+          badgeEl.className = `text-[9px] font-mono tracking-wider font-bold uppercase px-2.5 py-1 rounded ${badgeStyle}`;
+        }
+        
+        const subtitleEl = document.getElementById('modal-subtitle');
+        if (subtitleEl) subtitleEl.textContent = subtitle;
+        
+        const descEl = document.getElementById('modal-description');
+        if (descEl) descEl.textContent = description;
+        
+        const scaleEl = document.getElementById('modal-spec-scale');
+        if (scaleEl) scaleEl.textContent = scale;
+        
+        const methodEl = document.getElementById('modal-spec-method');
+        if (methodEl) methodEl.textContent = method;
+        
+        const matEl = document.getElementById('modal-spec-material');
+        if (matEl) matEl.textContent = material;
+        
+        const outEl = document.getElementById('modal-spec-outcome');
+        if (outEl) outEl.textContent = outcome;
+        
+        // Active visual transition flow
+        modalElement.classList.remove('hidden');
+        // Force layout repaint
+        modalElement.offsetHeight;
+        modalElement.classList.remove('opacity-0');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeModal() {
+        if (!modalElement) return;
+        modalElement.classList.add('opacity-0');
+        setTimeout(() => {
+          if (modalElement.classList.contains('opacity-0')) {
+            modalElement.classList.add('hidden');
+          }
+        }, 300);
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      // Robust Event Delegation for all Gallery Grid Cards (Static & Dynamic)
+      const galleryGridElement = document.getElementById('gallery-grid');
+      if (galleryGridElement) {
+        galleryGridElement.addEventListener('click', (e) => {
+          const card = e.target.closest('.gallery-card');
+          if (card) {
+            e.stopPropagation();
+            openModal(card);
+          }
+        });
+      }
+
+      if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeModal();
+        });
+      }
+
+      if (modalElement) {
+        modalElement.addEventListener('click', (e) => {
+          if (e.target === modalElement) {
+            closeModal();
+          }
+        });
+      }
+
+      // 5. Gallery Filtering Engine (Dynamic Tab-based)
+      const filterButtons = document.querySelectorAll('.gallery-tab-btn');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const filterValue = btn.getAttribute('data-filter-target');
+          const allCards = document.querySelectorAll('.gallery-card');
+          
+          // Switch tab states
+          filterButtons.forEach(b => {
+            b.classList.remove('active', 'border-cyan-400/30', 'text-cyan-400', 'bg-cyan-400/10');
+            b.classList.add('border-white/5', 'text-lightGray', 'bg-transparent');
+          });
+          btn.classList.add('active', 'border-cyan-400/30', 'text-cyan-400', 'bg-cyan-400/10');
+          btn.classList.remove('border-white/5', 'text-lightGray', 'bg-transparent');
+          
+          // Animate cards visibility based on types
+          allCards.forEach(card => {
+            const cardType = card.getAttribute('data-gallery-type');
+            if (filterValue === 'all' || cardType === filterValue) {
+              card.style.display = 'flex';
+              // Trigger smooth opacity entry transition
+              setTimeout(() => {
+                card.classList.remove('opacity-0', 'scale-95');
+              }, 15);
+            } else {
+              card.classList.add('opacity-0', 'scale-95');
+              setTimeout(() => {
+                if (card.classList.contains('opacity-0')) {
+                  card.style.display = 'none';
+                }
+              }, 200);
+            }
+          });
+        });
+      });
+
+      // 6. Manual Upload & Add Project Operations
+      const addProjectModal = document.getElementById('add-project-modal');
+      const addProjectBtn = document.getElementById('add-project-btn');
+      const addProjectCloseBtn = document.getElementById('add-project-close-btn');
+      const addProjectForm = document.getElementById('add-project-form');
+
+      // Drag and Drop Zone Elements
+      const pDropzone = document.getElementById('p-dropzone');
+      const pImageInput = document.getElementById('p-image-input');
+      const pUploadPrompt = document.getElementById('p-upload-prompt');
+      const pUploadPreview = document.getElementById('p-upload-preview');
+      const pPreviewImg = document.getElementById('p-preview-img');
+      const pPreviewFilename = document.getElementById('p-preview-filename');
+      const pClearUpload = document.getElementById('p-clear-upload');
+
+      let uploadedImageData = null;
+
+      // Handle custom file upload triggers
+      if (pImageInput && pDropzone) {
+        pImageInput.addEventListener('change', handleFileSelect);
+
+        // Styling indicators on drag-and-drop
+        ['dragenter', 'dragover'].forEach(eventName => {
+          pDropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            pDropzone.classList.add('border-cyan-400', 'bg-cyan-400/5');
+          }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          pDropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            pDropzone.classList.remove('border-cyan-400', 'bg-cyan-400/5');
+          }, false);
+        });
+
+        pDropzone.addEventListener('drop', (e) => {
+          const dt = e.dataTransfer;
+          const files = dt.files;
+          if (files.length) {
+            pImageInput.files = files;
+            handleFileSelect({ target: pImageInput });
+          }
+        }, false);
+      }
+
+      function handleFileSelect(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        // Size validation (Max 2.5MB)
+        if (file.size > 2.5 * 1024 * 1024) {
+          alert("File size exceeds the 2.5MB limit. Please choose a smaller layout snapshot.");
+          pImageInput.value = '';
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          uploadedImageData = event.target.result;
+
+          // Enable upload preview UI
+          if (pPreviewImg && pPreviewFilename && pUploadPrompt && pUploadPreview) {
+            pPreviewImg.src = uploadedImageData;
+            pPreviewFilename.textContent = file.name;
+            pUploadPrompt.classList.add('hidden');
+            pUploadPreview.classList.remove('hidden');
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+
+      if (pClearUpload) {
+        pClearUpload.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          uploadedImageData = null;
+          if (pImageInput) pImageInput.value = '';
+          if (pUploadPrompt) pUploadPrompt.classList.remove('hidden');
+          if (pUploadPreview) pUploadPreview.classList.add('hidden');
+        });
+      }
+
+      // Generate clean vector placeholder SVG if no image is uploaded
+      function generateFallbackSvg(title, category) {
+        const isAutocad = category === 'autocad';
+        const color = isAutocad ? '#22d3ee' : '#c084fc';
+        const subColor = isAutocad ? '#c084fc' : '#22d3ee';
+        const gridPatternId = 'blueprint-grid-' + Math.random().toString(36).substr(2, 9);
+        
+        return `
+          <svg viewBox="0 0 320 180" class="w-full h-44 bg-[#030712] rounded-t-2xl border-b border-white/5 relative overflow-hidden select-none">
+            <defs>
+              <pattern id="${gridPatternId}" width="16" height="16" patternUnits="userSpaceOnUse">
+                <path d="M 16 0 L 0 0 0 16" fill="none" stroke="${color}" stroke-width="0.3" stroke-opacity="0.12" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#${gridPatternId})" />
+            
+            <rect x="20" y="20" width="280" height="140" fill="none" stroke="${color}" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="4,4" />
+            <circle cx="160" cy="90" r="45" fill="none" stroke="${color}" stroke-width="1.2" stroke-opacity="0.6" />
+            <circle cx="160" cy="90" r="25" fill="none" stroke="${subColor}" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="2,2" />
+            
+            <line x1="100" y1="90" x2="220" y2="90" stroke="${color}" stroke-width="0.8" stroke-opacity="0.5" />
+            <line x1="160" y1="40" x2="160" y2="140" stroke="${color}" stroke-width="0.8" stroke-opacity="0.5" />
+            
+            <path d="M 160 90 L 195 55 M 160 90 L 195 125" stroke="${subColor}" stroke-width="0.8" stroke-opacity="0.6" />
+            
+            <text x="160" y="94" font-family="'Space Grotesk', sans-serif" font-size="10" fill="#ffffff" font-weight="900" text-anchor="middle" letter-spacing="1px">${title.toUpperCase()}</text>
+            <text x="160" y="152" font-family="'Space Mono', monospace" font-size="6" fill="${color}" font-weight="bold" text-anchor="middle" letter-spacing="2px">TECHNICAL DRAFT SCHEMATIC</text>
+            
+            <g transform="translate(280, 40)">
+              <circle cx="0" cy="0" r="10" fill="none" stroke="${color}" stroke-opacity="0.4" stroke-width="0.8" />
+              <path d="M 0 -8 L 3 2 L 0 0 L -3 2 Z" fill="${color}" fill-opacity="0.8" />
+            </g>
+          </svg>
+        `;
+      }
+
+      // Load custom projects and insert them into the gallery layout
+      function loadCustomProjects() {
+        const customProjects = JSON.parse(localStorage.getItem('engineering_custom_projects') || '[]');
+        const galleryGrid = document.getElementById('gallery-grid');
+        if (!galleryGrid) return;
+
+        // Strip previous dynamic entries to avoid duplicating
+        document.querySelectorAll('.custom-project-card').forEach(card => card.remove());
+
+        customProjects.forEach(proj => {
+          const cardEl = document.createElement('div');
+          cardEl.className = 'gallery-card custom-project-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300';
+          cardEl.setAttribute('data-gallery-type', proj.category);
+          cardEl.setAttribute('data-spec-title', proj.title);
+
+          const badgeText = proj.category === 'autocad' ? 'AutoCAD Drafting' : 'Physical Model / Craft';
+          const badgeStyle = proj.category === 'autocad' 
+            ? 'text-cyan-400 bg-cyan-600/10 border border-cyan-500/15'
+            : 'text-violet-400 bg-[#7C3AED]/10 border border-[#7C3AED]/15';
+
+          cardEl.setAttribute('data-spec-badge', badgeText);
+          cardEl.setAttribute('data-spec-badge-style', badgeStyle);
+          cardEl.setAttribute('data-spec-subtitle', proj.subtitle);
+          cardEl.setAttribute('data-spec-description', proj.description);
+          cardEl.setAttribute('data-spec-scale', proj.scale);
+          cardEl.setAttribute('data-spec-method', proj.method);
+          cardEl.setAttribute('data-spec-material', proj.material);
+          cardEl.setAttribute('data-spec-outcome', proj.outcome);
+
+          const iconName = proj.category === 'autocad' ? 'compass' : 'box';
+
+          let visualHtml = '';
+          if (proj.image) {
+            visualHtml = `
+              <div class="relative w-full overflow-hidden">
+                <img src="${proj.image}" class="w-full h-44 object-cover border-b border-white/5 rounded-t-2xl select-none" referrerPolicy="no-referrer" />
+                <div class="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                  <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-cyan-400/30 text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest">Open Specs Sheet</span>
+                </div>
+              </div>
+            `;
+          } else {
+            const fallbackSvg = generateFallbackSvg(proj.title, proj.category);
+            visualHtml = `
+              <div class="relative w-full overflow-hidden">
+                ${fallbackSvg}
+                <div class="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                  <span class="px-3 py-1.5 rounded-lg bg-midnight/80 border border-cyan-400/30 text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest">Open Specs Sheet</span>
+                </div>
+              </div>
+            `;
+          }
+
+          cardEl.innerHTML = `
+            ${visualHtml}
+            <div class="p-5 flex flex-col justify-between flex-grow gap-4">
+              <div class="flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-[9px] font-mono tracking-wider text-cyan-400 font-bold uppercase bg-cyan-600/10 border border-cyan-500/15 px-2.5 py-1 rounded ${badgeStyle}">${badgeText}</span>
+                  <i data-lucide="${iconName}" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-cyan-400 transition-colors"></i>
+                </div>
+                <h4 class="font-display font-extrabold text-white text-base mt-2 group-hover:text-cyan-300 transition-colors">${proj.title}</h4>
+                <p class="text-xs text-lightGray/85 leading-relaxed line-clamp-2">
+                  ${proj.description}
+                </p>
+              </div>
+              
+              <div class="flex items-center justify-between pt-3 border-t border-white/5 text-[9px] font-mono text-zinc-500">
+                <span>${proj.category === 'autocad' ? 'CAD Profile' : 'Physical Maquette'}</span>
+                <span class="text-[#22D3EE] font-bold group-hover:translate-x-1 transition-transform">Specs &rarr;</span>
+              </div>
+            </div>
+          `;
+
+          galleryGrid.appendChild(cardEl);
+        });
+
+        // Initialize any newly rendered lucide icons
+        if (typeof lucide !== 'undefined') {
+          lucide.createIcons();
+        }
+      }
+
+      // Bind Modal triggers
+      if (addProjectBtn && addProjectModal) {
+        addProjectBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          addProjectModal.classList.remove('hidden');
+          addProjectModal.offsetHeight;
+          addProjectModal.classList.remove('opacity-0');
+          document.body.classList.add('overflow-hidden');
+        });
+      }
+
+      function closeAddProjectModal() {
+        if (!addProjectModal) return;
+        addProjectModal.classList.add('opacity-0');
+        setTimeout(() => {
+          if (addProjectModal.classList.contains('opacity-0')) {
+            addProjectModal.classList.add('hidden');
+          }
+        }, 300);
+        document.body.classList.remove('overflow-hidden');
+
+        // Reset the form
+        if (addProjectForm) addProjectForm.reset();
+        uploadedImageData = null;
+        if (pUploadPrompt) pUploadPrompt.classList.remove('hidden');
+        if (pUploadPreview) pUploadPreview.classList.add('hidden');
+      }
+
+      if (addProjectCloseBtn) {
+        addProjectCloseBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeAddProjectModal();
+        });
+      }
+
+      if (addProjectModal) {
+        addProjectModal.addEventListener('click', (e) => {
+          if (e.target === addProjectModal) {
+            closeAddProjectModal();
+          }
+        });
+      }
+
+      // Handle form submission and storage save
+      if (addProjectForm) {
+        addProjectForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const titleVal = document.getElementById('p-title').value.trim();
+          const subtitleVal = document.getElementById('p-subtitle').value.trim();
+          const categoryVal = document.getElementById('p-category').value;
+          const scaleVal = document.getElementById('p-scale').value.trim();
+          const descriptionVal = document.getElementById('p-description').value.trim();
+          const methodVal = document.getElementById('p-method').value.trim();
+          const materialVal = document.getElementById('p-material').value.trim();
+          const outcomeVal = document.getElementById('p-outcome').value.trim();
+
+          if (!titleVal || !subtitleVal || !categoryVal || !scaleVal || !descriptionVal) {
+            alert("Please fill in all required inputs.");
+            return;
+          }
+
+          const newProject = {
+            id: 'proj-' + Date.now(),
+            title: titleVal,
+            subtitle: subtitleVal,
+            category: categoryVal,
+            scale: scaleVal,
+            description: descriptionVal,
+            method: methodVal,
+            material: materialVal,
+            outcome: outcomeVal,
+            image: uploadedImageData,
+            timestamp: Date.now()
+          };
+
+          // Save list to localStorage
+          const customProjects = JSON.parse(localStorage.getItem('engineering_custom_projects') || '[]');
+          customProjects.push(newProject);
+          localStorage.setItem('engineering_custom_projects', JSON.stringify(customProjects));
+
+          // Reload list and close form modal
+          loadCustomProjects();
+          closeAddProjectModal();
+
+          // Smoothly trigger current active tab filter update
+          const activeTab = document.querySelector('.gallery-tab-btn.active');
+          if (activeTab) {
+            activeTab.click();
+          }
+        });
+      }
+
+      // Initialize any custom uploaded projects on boot
+      document.addEventListener('DOMContentLoaded', () => {
+        loadCustomProjects();
+      });
     </script>
+
+    <!-- Technical Spec Sheet Modal Overlay -->
+    <div id="tech-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-midnight/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+      <div class="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#070b19] shadow-2xl flex flex-col md:flex-row items-stretch overflow-hidden">
+        
+        <!-- Close Button -->
+        <button id="modal-close-btn" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-lightGray hover:text-white hover:bg-white/10 transition-all cursor-pointer">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+        
+        <!-- Left Column: Visual vector preview -->
+        <div class="md:w-1/2 bg-[#02050f] p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-white/5 min-h-[250px]">
+          <div id="modal-visual-container" class="w-full flex items-center justify-center">
+            <!-- Dynamically cloned SVG content -->
+          </div>
+        </div>
+        
+        <!-- Right Column: Details spec sheet -->
+        <div class="md:w-1/2 p-6 sm:p-8 flex flex-col justify-between gap-6">
+          <div class="flex flex-col gap-4">
+            <!-- Badge -->
+            <div>
+              <span id="modal-type-badge" class="text-[9px] font-mono tracking-wider font-bold uppercase px-2.5 py-1 rounded"></span>
+            </div>
+            
+            <!-- Title -->
+            <div>
+              <h4 id="modal-title" class="font-display font-extrabold text-2xl text-white"></h4>
+              <p id="modal-subtitle" class="text-xs text-[#22D3EE] font-mono tracking-wide uppercase font-bold mt-1"></p>
+            </div>
+            
+            <!-- Description -->
+            <div>
+              <p class="text-[10px] text-zinc-500 font-mono tracking-widest uppercase font-bold mb-1.5">Description</p>
+              <p id="modal-description" class="text-xs sm:text-sm text-lightGray/90 leading-relaxed"></p>
+            </div>
+            
+            <!-- Specifications table/fields -->
+            <div class="border-t border-white/5 pt-4 flex flex-col gap-2">
+              <p class="text-[10px] text-zinc-500 font-mono tracking-widest uppercase font-bold mb-1.5">Technical Specifications</p>
+              
+              <div class="grid grid-cols-2 gap-4 text-xs font-mono">
+                <div>
+                  <span class="text-[10px] text-zinc-500 block">Scale / Dimensions:</span>
+                  <p id="modal-spec-scale" class="text-white font-medium mt-0.5 text-xs"></p>
+                </div>
+                <div>
+                  <span class="text-[10px] text-zinc-500 block">Method / Tools:</span>
+                  <p id="modal-spec-method" class="text-white font-medium mt-0.5 text-xs"></p>
+                </div>
+                <div>
+                  <span class="text-[10px] text-zinc-500 block">Primary Material / Layer:</span>
+                  <p id="modal-spec-material" class="text-white font-medium mt-0.5 text-xs"></p>
+                </div>
+                <div>
+                  <span class="text-[10px] text-zinc-500 block">Learning Outcome:</span>
+                  <p id="modal-spec-outcome" class="text-white font-medium mt-0.5 text-xs"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Footer metadata -->
+          <div class="border-t border-white/5 pt-4 flex items-center justify-between text-[10px] font-mono text-zinc-500">
+            <span>DHAKA POLYTECHNIC INSTITUTE</span>
+            <span class="text-[#22D3EE] font-bold">CIVIL ENGINEERING DEPT</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Add Project Form Modal Overlay -->
+    <div id="add-project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-midnight/95 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+      <div class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl border border-white/10 bg-[#070b19] shadow-2xl p-6 sm:p-8 flex flex-col gap-6">
+        
+        <!-- Close Button -->
+        <button id="add-project-close-btn" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-lightGray hover:text-white hover:bg-white/10 transition-all cursor-pointer">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+        
+        <!-- Header -->
+        <div>
+          <h4 class="font-display font-extrabold text-2xl text-white">Add Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">Project / Sample</span></h4>
+          <p class="text-xs text-zinc-500 font-mono mt-1">Upload a snapshot or enter details manually to extend your portfolio gallery.</p>
+        </div>
+        
+        <form id="add-project-form" class="flex flex-col gap-5">
+          <!-- Two columns for Title and Subtitle -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="p-title" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Project Title *</label>
+              <input type="text" id="p-title" required placeholder="e.g. 2D Duplex Floor Plan" class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="p-subtitle" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Subtitle / Subcategory *</label>
+              <input type="text" id="p-subtitle" required placeholder="e.g. AutoCAD 2D Drafting & Partitioning" class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full" />
+            </div>
+          </div>
+          
+          <!-- Category Selector & Scale -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="p-category" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Category *</label>
+              <select id="p-category" required class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors w-full">
+                <option value="autocad" class="bg-midnight text-white">AutoCAD Blueprint</option>
+                <option value="physical" class="bg-midnight text-white">Physical Model</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="p-scale" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Scale / Dimension *</label>
+              <input type="text" id="p-scale" required placeholder="e.g. Scale: 1/4&quot; = 1'-0&quot;" class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full" />
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="flex flex-col gap-1.5">
+            <label for="p-description" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Project Description *</label>
+            <textarea id="p-description" required rows="3" placeholder="Explain the technical aspects of the project, including structural details, compliance rules, structural space management, etc." class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full resize-none"></textarea>
+          </div>
+
+          <!-- Technical Specs Matrix -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="p-method" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Method / Tools *</label>
+              <input type="text" id="p-method" required placeholder="e.g. AutoCAD Multi-Layer" class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="p-material" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Material / Layers *</label>
+              <input type="text" id="p-material" required placeholder="e.g. Balsa Wood, Epoxy" class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="p-outcome" class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Learning Outcome *</label>
+              <input type="text" id="p-outcome" required placeholder="e.g. Mastered plan detailing" class="bg-[#02050f]/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-cyan-400 transition-colors w-full" />
+            </div>
+          </div>
+
+          <!-- Premium Drag-and-Drop Image Uploader -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase font-bold">Project Image / Blueprint Upload</label>
+            <div id="p-dropzone" class="border border-dashed border-white/10 hover:border-cyan-400/40 rounded-xl p-5 text-center cursor-pointer transition-all relative flex flex-col items-center justify-center gap-2 bg-[#02050f]/50 select-none">
+              <input type="file" id="p-image-input" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" />
+              <div id="p-upload-prompt" class="flex flex-col items-center gap-1">
+                <i data-lucide="upload" class="w-6 h-6 text-cyan-400/80 mb-1"></i>
+                <p class="text-xs text-lightGray font-medium">Drag and drop file here or click to browse</p>
+                <p class="text-[9px] text-zinc-500 font-mono">JPG, PNG or SVG formats supported (Max 2.5MB)</p>
+              </div>
+              <div id="p-upload-preview" class="hidden flex items-center gap-3 bg-midnight/80 border border-white/10 rounded-lg p-2 max-w-full">
+                <img id="p-preview-img" class="w-12 h-12 object-cover rounded-lg border border-white/10" />
+                <div class="text-left">
+                  <span id="p-preview-filename" class="text-[10px] text-lightGray block truncate max-w-[150px] font-mono"></span>
+                  <button id="p-clear-upload" type="button" class="text-rose-400 hover:text-rose-300 text-[10px] font-mono font-bold mt-0.5">Remove file</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full mt-2 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-midnight text-xs font-display font-black uppercase tracking-wider transition-all duration-300 hover:brightness-110 active:scale-[0.98] cursor-pointer">
+            Publish to Gallery &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
