@@ -1,34 +1,27 @@
 import express from "express";
 import path from "path";
-import fs from "fs";
 import { createServer as createViteServer } from "vite";
+import { getProjects, createProject } from "./src/db/queries.ts";
 
 const app = express();
 const PORT = 3000;
-const DATA_FILE = path.join(process.cwd(), "projects.json");
 
 // Middleware to handle JSON payloads with base64 images
 app.use(express.json({ limit: "15mb" }));
 
-// Seed projects file if it doesn't exist
-if (!fs.existsSync(DATA_FILE)) {
-  fs.writeFileSync(DATA_FILE, JSON.stringify([], null, 2), "utf-8");
-}
-
-// 1. GET /api/projects - Retrieve dynamic projects from the server
-app.get("/api/projects", (req, res) => {
+// 1. GET /api/projects - Retrieve dynamic projects from Cloud SQL database
+app.get("/api/projects", async (req, res) => {
   try {
-    const data = fs.readFileSync(DATA_FILE, "utf-8");
-    const projects = JSON.parse(data);
-    res.json(projects);
-  } catch (error) {
-    console.error("Error reading projects database:", error);
-    res.status(500).json({ error: "Failed to fetch projects" });
+    const projectsList = await getProjects();
+    res.json(projectsList);
+  } catch (error: any) {
+    console.error("Error reading projects from database:", error);
+    res.status(500).json({ error: error.message || "Failed to fetch projects" });
   }
 });
 
-// 2. POST /api/projects - Add a new engineering project
-app.post("/api/projects", (req, res) => {
+// 2. POST /api/projects - Add a new engineering project to Cloud SQL database
+app.post("/api/projects", async (req, res) => {
   try {
     const { title, subtitle, category, scale, description, method, material, outcome, image, glb } = req.body;
     
@@ -36,8 +29,9 @@ app.post("/api/projects", (req, res) => {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
-    const newProject = {
-      id: "proj-" + Date.now(),
+    const projectId = "proj-" + Date.now();
+    const newProject = await createProject({
+      id: projectId,
       title,
       subtitle,
       category,
@@ -48,18 +42,12 @@ app.post("/api/projects", (req, res) => {
       outcome: outcome || "",
       image: image || null,
       glb: glb || null,
-      timestamp: Date.now()
-    };
+    });
 
-    const data = fs.readFileSync(DATA_FILE, "utf-8");
-    const projects = JSON.parse(data);
-    projects.push(newProject);
-    
-    fs.writeFileSync(DATA_FILE, JSON.stringify(projects, null, 2), "utf-8");
     res.status(201).json(newProject);
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error saving engineering project:", error);
-    res.status(500).json({ error: "Failed to persist project" });
+    res.status(500).json({ error: error.message || "Failed to persist project" });
   }
 });
 
