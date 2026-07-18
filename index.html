@@ -2304,10 +2304,19 @@
       const modalElement = document.getElementById('tech-modal');
       const modalCloseBtn = document.getElementById('modal-close-btn');
 
+      let currentActiveProjectId = null;
+
       function openModal(card) {
         if (!modalElement) return;
         
         // Extract specifications from card data attributes
+        const projId = card.getAttribute('data-spec-id');
+        currentActiveProjectId = projId;
+        
+        if (projId) {
+          history.replaceState(null, null, '#project-' + projId);
+        }
+        
         const title = card.getAttribute('data-spec-title');
         const badgeText = card.getAttribute('data-spec-badge');
         const badgeStyle = card.getAttribute('data-spec-badge-style');
@@ -2412,6 +2421,9 @@
           }
         }, 300);
         document.body.classList.remove('overflow-hidden');
+        
+        currentActiveProjectId = null;
+        history.replaceState(null, null, ' ');
       }
 
       // Robust Event Delegation for all Gallery Grid Cards (Static & Dynamic)
@@ -2440,6 +2452,83 @@
           }
         });
       }
+
+      // 4.1 Copy Project Direct Link Interactivity
+      const modalShareBtn = document.getElementById('modal-share-btn');
+      const modalShareText = document.getElementById('modal-share-text');
+
+      if (modalShareBtn) {
+        modalShareBtn.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          if (!currentActiveProjectId) return;
+
+          const shareUrl = `${window.location.origin}${window.location.pathname}#project-${currentActiveProjectId}`;
+
+          try {
+            await navigator.clipboard.writeText(shareUrl);
+            if (modalShareText) {
+              modalShareText.textContent = 'Link Copied!';
+              modalShareBtn.classList.remove('text-cyan-400', 'bg-cyan-500/10', 'border-cyan-500/20');
+              modalShareBtn.classList.add('text-emerald-400', 'bg-emerald-500/10', 'border-emerald-500/30');
+
+              setTimeout(() => {
+                modalShareText.textContent = 'Copy Project Link';
+                modalShareBtn.classList.remove('text-emerald-400', 'bg-emerald-500/10', 'border-emerald-500/30');
+                modalShareBtn.classList.add('text-cyan-400', 'bg-cyan-500/10', 'border-cyan-500/20');
+              }, 2000);
+            }
+          } catch (err) {
+            console.warn('Navigator clipboard copy failed, trying fallback:', err);
+            const textArea = document.createElement("textarea");
+            textArea.value = shareUrl;
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+              document.execCommand('copy');
+              if (modalShareText) {
+                modalShareText.textContent = 'Link Copied!';
+                modalShareBtn.classList.remove('text-cyan-400', 'bg-cyan-500/10', 'border-cyan-500/20');
+                modalShareBtn.classList.add('text-emerald-400', 'bg-emerald-500/10', 'border-emerald-500/30');
+                setTimeout(() => {
+                  modalShareText.textContent = 'Copy Project Link';
+                  modalShareBtn.classList.remove('text-emerald-400', 'bg-emerald-500/10', 'border-emerald-500/30');
+                  modalShareBtn.classList.add('text-cyan-400', 'bg-cyan-500/10', 'border-cyan-500/20');
+                }, 2000);
+              }
+            } catch (errFallback) {
+              console.error('Fallback copy failed:', errFallback);
+            }
+            document.body.removeChild(textArea);
+          }
+        });
+      }
+
+      // 4.2 URL Deep Linking / Routing Interactivity
+      function checkUrlHashAndOpen() {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#project-')) {
+          const targetProjId = hash.replace('#project-', '');
+          const targetCard = document.querySelector(`.gallery-card[data-spec-id="${targetProjId}"]`);
+          if (targetCard) {
+            // Scroll to the projects section first to give context
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+              const offsetHeader = 80;
+              const elementPosition = projectsSection.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - offsetHeader;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+            openModal(targetCard);
+          }
+        }
+      }
+
+      window.addEventListener('hashchange', checkUrlHashAndOpen);
 
       // 5. Gallery Filtering Engine (Dynamic Tab-based)
       const filterButtons = document.querySelectorAll('.gallery-tab-btn');
@@ -2706,6 +2795,7 @@
           cardEl.className = 'gallery-card custom-project-card group relative rounded-2xl overflow-hidden glass-card border border-white/5 bg-midnight/20 flex flex-col hover:border-cyan-500/30 cursor-pointer transition-all duration-300';
           cardEl.setAttribute('data-gallery-type', proj.category);
           cardEl.setAttribute('data-spec-title', proj.title);
+          cardEl.setAttribute('data-spec-id', proj.id || 'proj-' + Math.random().toString(36).substr(2, 9));
 
           const badgeText = proj.category === 'autocad' ? 'AutoCAD Drafting' : 'Physical Model / Craft';
           const badgeStyle = proj.category === 'autocad' 
@@ -2785,6 +2875,9 @@
         if (typeof lucide !== 'undefined') {
           lucide.createIcons();
         }
+
+        // Auto-open spec sheet if matching project hash exists in URL
+        checkUrlHashAndOpen();
       }
 
       // Bind Modal triggers
@@ -2975,9 +3068,15 @@
           </div>
           
           <!-- Footer metadata -->
-          <div class="border-t border-white/5 pt-4 flex items-center justify-between text-[10px] font-mono text-zinc-500">
-            <span>DHAKA POLYTECHNIC INSTITUTE</span>
-            <span class="text-[#22D3EE] font-bold">CIVIL ENGINEERING DEPT</span>
+          <div class="border-t border-white/5 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[10px] font-mono text-zinc-500">
+            <div class="flex flex-col">
+              <span>DHAKA POLYTECHNIC INSTITUTE</span>
+              <span class="text-[#22D3EE] font-bold">CIVIL ENGINEERING DEPT</span>
+            </div>
+            <button id="modal-share-btn" class="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-400/10 hover:bg-cyan-400/20 border border-cyan-400/20 hover:border-cyan-400/40 text-cyan-400 font-bold transition-all active:scale-[0.97] cursor-pointer select-none text-[10px] shrink-0">
+              <i data-lucide="share-2" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span id="modal-share-text">Copy Project Link</span>
+            </button>
           </div>
         </div>
         
