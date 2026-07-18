@@ -30,7 +30,7 @@ app.get("/api/projects", (req, res) => {
 // 2. POST /api/projects - Add a new engineering project
 app.post("/api/projects", (req, res) => {
   try {
-    const { title, subtitle, category, scale, description, method, material, outcome, image } = req.body;
+    const { title, subtitle, category, scale, description, method, material, outcome, image, glb } = req.body;
     
     if (!title || !subtitle || !category || !scale || !description) {
       return res.status(400).json({ error: "Missing required fields" });
@@ -47,6 +47,7 @@ app.post("/api/projects", (req, res) => {
       material: material || "",
       outcome: outcome || "",
       image: image || null,
+      glb: glb || null,
       timestamp: Date.now()
     };
 
