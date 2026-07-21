@@ -27,6 +27,58 @@ const defaultProjects = [
     outcome: "A submission-ready architectural blueprint compliant with municipal building code requirements.",
     image: null,
     glb: null
+  },
+  {
+    id: "proj-default-3",
+    title: "Structural Column & Beam Junction Model",
+    subtitle: "Reinforced Concrete Detailing",
+    category: "physical",
+    scale: "1:10",
+    description: "A scaled physical structural model illustrating shear reinforcement stirrups, rebar lap splices, and beam-column joint anchoring according to ACI/BNBC structural guidelines.",
+    method: "Rebar bending, transparent resin casing, wire tying",
+    material: "Miniature steel rebar, clear epoxy resin, plywood base",
+    outcome: "Clear 3D visual representation of structural joint rebar congestion and concrete anchorage.",
+    image: null,
+    glb: null
+  },
+  {
+    id: "proj-default-4",
+    title: "Multi-Story Building Cross-Section & Elevation",
+    subtitle: "CAD Structural Detailing",
+    category: "autocad",
+    scale: "1:100",
+    description: "2D AutoCAD cross-sectional elevation drawing detailing floor slab thickness, beam dimensions, footing depth, staircase flights, and structural grid lines for a 5-story building.",
+    method: "AutoCAD 2D, block attribution, dynamic dimensioning",
+    material: "DWG Format, PDF Vector Export",
+    outcome: "Complete set of structural working drawings for construction execution.",
+    image: null,
+    glb: null
+  },
+  {
+    id: "proj-default-5",
+    title: "Pratt Truss Bridge Scale Model",
+    subtitle: "Structural Engineering Maquette",
+    category: "physical",
+    scale: "1:50",
+    description: "A precision-engineered Pratt truss bridge model tested for load distribution. Demonstrates tension and compression member performance under vertical point loads.",
+    method: "Laser cutting, gusset plate riveting, deflection testing",
+    material: "Balsa wood, acrylic gusset plates, steel micro-bolts",
+    outcome: "High strength-to-weight ratio structural prototype verified with physical load testing.",
+    image: null,
+    glb: null
+  },
+  {
+    id: "proj-default-6",
+    title: "3D Mechanical & Plumbing Isometric Piping Plan",
+    subtitle: "AutoCAD 3D & Isometric",
+    category: "autocad",
+    scale: "1:25",
+    description: "Isometric 3D CAD drawing showing water supply, drainage piping routes, valve placement, and pipe invert levels for a commercial building project.",
+    method: "Isometric CAD drafting, 3D pipe routing, layer color coding",
+    material: "Digital DWG File, Isometric Layout",
+    outcome: "Clash-free MEP coordination drawing for plumbing technicians.",
+    image: null,
+    glb: null
   }
 ];
 
