@@ -6,7 +6,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 import { createServer as createViteServer } from "vite";
-import { getProjects, createProject } from "./src/db/queries.ts";
+import { getProjects, createProject, deleteProject } from "./src/db/queries.ts";
 
 const app = express();
 const PORT = 3000;
@@ -53,6 +53,18 @@ app.post("/api/projects", async (req, res) => {
   } catch (error: any) {
     console.error("Error saving engineering project:", error);
     res.status(500).json({ error: error.message || "Failed to persist project" });
+  }
+});
+
+// 3. DELETE /api/projects/:id - Remove an engineering project
+app.delete("/api/projects/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deleted = await deleteProject(id);
+    res.json({ success: true, deleted });
+  } catch (error: any) {
+    console.error("Error deleting project:", error);
+    res.status(500).json({ error: error.message || "Failed to delete project" });
   }
 });
 

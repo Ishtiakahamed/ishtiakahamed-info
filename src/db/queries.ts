@@ -1,3 +1,4 @@
+import { eq } from "drizzle-orm";
 import { db } from "./index.ts";
 import { projects } from "./schema.ts";
 
@@ -134,3 +135,14 @@ export async function createProject(input: NewProjectInput) {
     throw new Error("Failed to save project. Please try again later.", { cause: error });
   }
 }
+
+export async function deleteProject(id: string) {
+  try {
+    const [deleted] = await db.delete(projects).where(eq(projects.id, id)).returning();
+    return deleted;
+  } catch (error) {
+    console.error("Database delete failed inside deleteProject:", error);
+    throw new Error("Failed to delete project. Please try again later.", { cause: error });
+  }
+}
+

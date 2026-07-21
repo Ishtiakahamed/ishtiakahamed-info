@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Metadata -->
-    <title>Physical & CAD Projects | Ishtiak Ahamed - Civil Drafting & Physical Models</title>
-    <meta name="description" content="Explore Physical Engineering Models, AutoCAD 2D/3D Civil Drafting Blueprints, and Structural Maquettes created by Ishtiak Ahamed." />
+    <title>Physical & CAD Projects | Ishtiak Ahamed - Civil Drafting & 3D Models</title>
+    <meta name="description" content="Explore Physical Engineering Models, AutoCAD 2D/3D Civil Drafting Blueprints, and 3D GLB Models created by Ishtiak Ahamed." />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- AOS Animate On Scroll Library CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Google Model Viewer component for 3D GLB Rendering -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
@@ -39,21 +36,15 @@
               neonCyan: '#22D3EE',
               glassBg: 'rgba(11, 15, 28, 0.75)',
               glassBorder: 'rgba(255, 255, 255, 0.07)',
-            },
-            boxShadow: {
-              'glow-purple': '0 0 20px rgba(124, 58, 237, 0.25)',
-              'glow-cyan': '0 0 20px rgba(34, 211, 238, 0.25)',
-              'glass-hover': '0 12px 30px rgba(0, 0, 0, 0.4)',
             }
           }
         }
       }
     </script>
 
-    <!-- Lucide Icons Custom Styling and CDN -->
+    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom Structuralist CSS styles -->
     <style type="text/css">
       .cad-bg {
         background-color: #05070f;
@@ -68,10 +59,6 @@
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
       }
-      .blueprint-accent-border {
-        border-color: rgba(34, 211, 238, 0.2);
-      }
-      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -108,18 +95,15 @@
           <a href="index.html" class="text-xs font-mono tracking-widest uppercase text-lightGray hover:text-cyan-400 transition-colors flex items-center gap-1.5">
             <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Main Portfolio
           </a>
-          <a href="#gallery-grid" class="text-xs font-mono tracking-widest uppercase text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">
-            Physical & CAD Gallery
-          </a>
-          <a href="#stats" class="text-xs font-mono tracking-widest uppercase text-lightGray hover:text-cyan-400 transition-colors">
-            Specifications
+          <a href="#physical-cad-grid" class="text-xs font-mono tracking-widest uppercase text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">
+            Projects Showcase
           </a>
         </nav>
 
         <!-- CTA Action Buttons -->
         <div class="hidden md:flex items-center gap-3">
           <button id="add-project-btn-header" class="px-4 py-2 rounded-full text-xs font-display font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border border-cyan-400 bg-cyan-400 text-[#030712] hover:bg-transparent hover:text-cyan-400 flex items-center gap-1.5 shadow-lg shadow-cyan-400/20">
-            <i data-lucide="plus-circle" class="w-4 h-4"></i> Add Project
+            <i data-lucide="plus-circle" class="w-4 h-4"></i> Add New Project
           </button>
           <a href="index.html#contact" class="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 transition-colors text-white font-display font-bold tracking-wider text-xs uppercase shadow-sm">
             Contact
@@ -143,13 +127,10 @@
         </div>
         <nav class="flex flex-col items-center gap-5 text-center my-auto w-full max-w-xs">
           <a href="index.html" class="mobile-nav-item text-base font-mono tracking-widest uppercase text-lightGray hover:text-[#22D3EE] transition-colors flex items-center gap-2">
-            <i data-lucide="home" class="w-4 h-4"></i> Back to Home Page
+            <i data-lucide="home" class="w-4 h-4"></i> Back to Main Page
           </a>
-          <a href="#gallery-grid" class="mobile-nav-item text-base font-mono tracking-widest uppercase text-cyan-400 font-bold flex items-center gap-2">
+          <a href="#physical-cad-grid" class="mobile-nav-item text-base font-mono tracking-widest uppercase text-cyan-400 font-bold flex items-center gap-2">
             <i data-lucide="layers" class="w-4 h-4"></i> Physical & CAD Projects
-          </a>
-          <a href="index.html#contact" class="mobile-nav-item text-base font-mono tracking-widest uppercase text-lightGray hover:text-[#22D3EE] transition-colors flex items-center gap-2">
-            <i data-lucide="mail" class="w-4 h-4"></i> Contact Me
           </a>
         </nav>
         <div class="w-full max-w-xs">
@@ -162,81 +143,42 @@
 
     <!-- HERO SECTION -->
     <main class="flex-grow pt-28">
-      <section class="py-12 md:py-20 relative overflow-hidden border-b border-white/5">
+      <section class="py-10 md:py-16 relative border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
           
-          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div class="max-w-3xl">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-4">
-                <i data-lucide="box" class="w-3.5 h-3.5"></i> Official Portfolio Showcase Page
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-3">
+                <i data-lucide="box" class="w-3.5 h-3.5"></i> Physical & CAD Projects Gallery
               </div>
-              <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight mb-4">
+              <h1 class="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight mb-3">
                 Physical & <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-indigo-400">CAD Projects</span>
               </h1>
               <p class="text-sm md:text-base text-slate-400 leading-relaxed max-w-2xl">
-                A dedicated gallery highlighting civil engineering physical scale models, structural maquettes, and AutoCAD 2D/3D drafting blueprints. Connected live to Cloud SQL persistent storage.
+                Displaying civil engineering scale models, 2D/3D AutoCAD blueprints, and interactive 3D GLB models. You can easily add, view, or remove projects below.
               </p>
             </div>
 
             <!-- Quick Action Box -->
             <div class="flex flex-wrap items-center gap-3">
               <button id="add-project-btn-hero" class="px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-display font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-cyan-500/25 flex items-center gap-2">
-                <i data-lucide="plus-circle" class="w-4 h-4"></i> Submit New Project
+                <i data-lucide="plus-circle" class="w-4 h-4"></i> Add New Project
               </button>
-              <a href="index.html#projects" class="px-6 py-3 rounded-full border border-white/10 hover:border-cyan-400/40 bg-white/5 text-white font-display font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
-                <i data-lucide="arrow-left" class="w-4 h-4"></i> Main Page
+              <a href="index.html" class="px-5 py-3 rounded-full border border-white/10 hover:border-cyan-400/40 bg-white/5 text-white font-display font-semibold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Main Page
               </a>
-            </div>
-          </div>
-
-          <!-- HIGHLIGHT STATS CARDS -->
-          <div id="stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-            <div class="glass-card p-5 rounded-2xl border border-white/5 hover:border-cyan-500/30 transition-all">
-              <div class="flex items-center justify-between text-cyan-400 mb-2">
-                <i data-lucide="box-select" class="w-5 h-5"></i>
-                <span class="text-[10px] font-mono text-slate-500 uppercase">Scale 1:10 - 1:100</span>
-              </div>
-              <p class="font-display font-bold text-2xl text-white mb-0.5">Physical Models</p>
-              <p class="text-xs text-slate-400">Foundation, Truss & Rebar Maquettes</p>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl border border-white/5 hover:border-cyan-500/30 transition-all">
-              <div class="flex items-center justify-between text-teal-400 mb-2">
-                <i data-lucide="drafting-compass" class="w-5 h-5"></i>
-                <span class="text-[10px] font-mono text-slate-500 uppercase">2D & 3D CAD</span>
-              </div>
-              <p class="font-display font-bold text-2xl text-white mb-0.5">AutoCAD Drafts</p>
-              <p class="text-xs text-slate-400">Floor plans, Elevation & Sections</p>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl border border-white/5 hover:border-cyan-500/30 transition-all">
-              <div class="flex items-center justify-between text-indigo-400 mb-2">
-                <i data-lucide="database" class="w-5 h-5"></i>
-                <span class="text-[10px] font-mono text-slate-500 uppercase">Live Database</span>
-              </div>
-              <p class="font-display font-bold text-2xl text-white mb-0.5">Cloud SQL</p>
-              <p class="text-xs text-slate-400">PostgreSQL Cloud Persistence</p>
-            </div>
-
-            <div class="glass-card p-5 rounded-2xl border border-white/5 hover:border-cyan-500/30 transition-all">
-              <div class="flex items-center justify-between text-purple-400 mb-2">
-                <i data-lucide="view" class="w-5 h-5"></i>
-                <span class="text-[10px] font-mono text-slate-500 uppercase">3D Render</span>
-              </div>
-              <p class="font-display font-bold text-2xl text-white mb-0.5">Interactive 3D</p>
-              <p class="text-xs text-slate-400">Real-time model-viewer rotation</p>
             </div>
           </div>
 
         </div>
       </section>
 
-      <!-- MAIN GALLERY & FILTER SECTION -->
-      <section class="py-16 relative">
+      <!-- MAIN GALLERY SECTION -->
+      <section class="py-12 relative">
         <div class="max-w-7xl mx-auto px-6">
 
           <!-- TOOLBAR: FILTER TABS & SEARCH BAR -->
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10 pb-6 border-b border-white/5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 pb-6 border-b border-white/5">
             
             <!-- Category Tabs -->
             <div class="flex flex-wrap items-center gap-2 select-none">
@@ -251,10 +193,10 @@
               </button>
             </div>
 
-            <!-- Search Box & Add Button -->
+            <!-- Search Box & Actions -->
             <div class="flex items-center gap-3 w-full md:w-auto">
               <div class="relative w-full md:w-64">
-                <input type="text" id="project-search-input" placeholder="Search title, scale, material..." class="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors" />
+                <input type="text" id="project-search-input" placeholder="Search title, scale, description..." class="w-full pl-9 pr-4 py-2 rounded-full bg-slate-900/80 border border-white/10 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors" />
                 <i data-lucide="search" class="w-4 h-4 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2"></i>
               </div>
               <button id="add-project-btn-grid" class="px-4 py-2 rounded-full text-xs font-display font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer border border-cyan-400 bg-cyan-400 text-black hover:bg-transparent hover:text-cyan-400 flex items-center gap-1.5 whitespace-nowrap shadow-md shadow-cyan-400/10">
@@ -267,14 +209,14 @@
           <!-- PROJECTS GRID CONTAINER -->
           <div id="projects-loading" class="py-12 text-center">
             <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400 mb-3"></div>
-            <p class="text-xs font-mono text-slate-400">Connecting to Cloud SQL database & fetching projects...</p>
+            <p class="text-xs font-mono text-slate-400">Loading projects database...</p>
           </div>
 
           <div id="projects-empty-state" class="hidden py-16 text-center glass-card rounded-2xl border border-white/5 my-6">
             <i data-lucide="folder-open" class="w-12 h-12 text-slate-600 mx-auto mb-3"></i>
             <h3 class="font-display font-bold text-lg text-white mb-1">No Projects Found</h3>
-            <p class="text-xs text-slate-400 max-w-sm mx-auto mb-4">Try adjusting your search query or filter tab, or add a new engineering project.</p>
-            <button id="add-project-btn-empty" class="px-4 py-2 rounded-full bg-cyan-400 text-black font-display font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5">
+            <p class="text-xs text-slate-400 max-w-sm mx-auto mb-4">Click "Add Project" to add your engineering project, description, and 3D GLB model.</p>
+            <button id="add-project-btn-empty" class="px-5 py-2.5 rounded-full bg-cyan-400 text-black font-display font-bold text-xs uppercase tracking-wider inline-flex items-center gap-1.5 shadow-lg shadow-cyan-400/20">
               <i data-lucide="plus-circle" class="w-4 h-4"></i> Add First Project
             </button>
           </div>
@@ -286,17 +228,16 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-white/5 bg-[#03050b] py-12 text-xs text-slate-500">
+    <footer class="border-t border-white/5 bg-[#03050b] py-10 text-xs text-slate-500">
       <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center gap-3">
           <div class="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-mono text-xs font-bold">
             IA
           </div>
-          <span>&copy; 2026 Ishtiak Ahamed. Physical & CAD Projects Portfolio.</span>
+          <span>&copy; 2026 Ishtiak Ahamed. Physical & CAD Portfolio.</span>
         </div>
         <div class="flex items-center gap-6 font-mono text-[11px] uppercase tracking-wider">
           <a href="index.html" class="hover:text-cyan-400 transition-colors">Main Portfolio</a>
-          <a href="index.html#projects" class="hover:text-cyan-400 transition-colors">All Drafts</a>
           <a href="index.html#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
         </div>
       </div>
@@ -313,7 +254,7 @@
         </button>
 
         <!-- Modal Header / Visual -->
-        <div class="relative bg-slate-900 border-b border-white/10 min-h-[220px] flex items-center justify-center p-6" id="modal-visual-container">
+        <div class="relative bg-slate-950 border-b border-white/10 min-h-[260px] flex items-center justify-center p-6" id="modal-visual-container">
           <!-- Populated dynamically (3D model or image or CAD preview) -->
         </div>
 
@@ -334,15 +275,21 @@
                 Subtitle
               </p>
             </div>
-            <button id="modal-share-btn" class="px-3 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-mono flex items-center gap-1.5 transition-colors">
-              <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
-              <span id="modal-share-text">Copy Project Link</span>
-            </button>
+            
+            <div class="flex items-center gap-2">
+              <button id="modal-delete-btn" class="px-3.5 py-1.5 rounded-full border border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs font-mono flex items-center gap-1.5 transition-colors">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Delete
+              </button>
+              <button id="modal-share-btn" class="px-3.5 py-1.5 rounded-full border border-cyan-500/20 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-mono flex items-center gap-1.5 transition-colors">
+                <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+                <span id="modal-share-text">Share Link</span>
+              </button>
+            </div>
           </div>
 
           <div>
             <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-1">Project Description</h4>
-            <p id="modal-description" class="text-sm text-slate-300 leading-relaxed">
+            <p id="modal-description" class="text-sm text-slate-300 leading-relaxed whitespace-pre-line">
               Description text here...
             </p>
           </div>
@@ -376,28 +323,28 @@
 
         <div class="mb-6">
           <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 text-[10px] font-mono mb-2">
-            <i data-lucide="database" class="w-3 h-3"></i> Persists to Cloud SQL
+            <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Add Engineering Project
           </div>
           <h3 class="font-display font-bold text-xl text-white">Add New Physical or CAD Project</h3>
-          <p class="text-xs text-slate-400">Fill in details to submit a new engineering model or drawing.</p>
+          <p class="text-xs text-slate-400">Add project details and attach an image or GitHub 3D GLB model link.</p>
         </div>
 
         <form id="add-project-form" class="space-y-4">
           <div>
-            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Project Title *</label>
-            <input type="text" id="input-title" required placeholder="e.g. Preparation of Pile Foundation Model" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Project Name / Title *</label>
+            <input type="text" id="input-title" required placeholder="e.g. Pile Foundation Structural Model" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Subtitle *</label>
-              <input type="text" id="input-subtitle" required placeholder="e.g. Physical Maquette" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
+              <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Subtitle / Category Type *</label>
+              <input type="text" id="input-subtitle" required placeholder="e.g. Physical Maquette / 3D CAD" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
             </div>
             <div>
               <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Category *</label>
               <select id="input-category" required class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400">
                 <option value="physical">Physical Model</option>
-                <option value="autocad">AutoCAD Blueprint</option>
+                <option value="autocad">AutoCAD / 3D CAD</option>
               </select>
             </div>
           </div>
@@ -409,27 +356,45 @@
             </div>
             <div>
               <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Drafting / Fabrication Method</label>
-              <input type="text" id="input-method" placeholder="e.g. 2D CAD, Hand crafting" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
+              <input type="text" id="input-method" placeholder="e.g. Hand crafting, AutoCAD 3D" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
             </div>
           </div>
 
           <div>
             <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Materials / Format</label>
-            <input type="text" id="input-material" placeholder="e.g. Cast plaster, steel rebar, DWG format" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
+            <input type="text" id="input-material" placeholder="e.g. Cast plaster, acrylic, DWG format, GLB model" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
           </div>
 
           <div>
             <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Engineering Outcome</label>
-            <input type="text" id="input-outcome" placeholder="e.g. Lab display, construction drawing" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
+            <input type="text" id="input-outcome" placeholder="e.g. Educational display, working blueprint" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
           </div>
 
           <div>
-            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Description *</label>
-            <textarea id="input-description" required rows="3" placeholder="Describe the structural purpose, dimensions, and engineering details..." class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400"></textarea>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Project Description *</label>
+            <textarea id="input-description" required rows="3" placeholder="Write full details about the structural project..." class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400"></textarea>
           </div>
 
+          <!-- 3D GLB LINK / GITHUB SUPPORT -->
+          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-cyan-500/20 space-y-2">
+            <label class="block text-xs font-mono text-cyan-400 uppercase font-bold flex items-center gap-1.5">
+              <i data-lucide="box" class="w-3.5 h-3.5"></i> 3D Model GLB File URL (GitHub or Remote Link)
+            </label>
+            <input type="url" id="input-glb-url" placeholder="https://github.com/user/repo/raw/main/model.glb" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/10 text-xs text-white focus:outline-none focus:border-cyan-400" />
+            <p class="text-[10px] text-slate-400 leading-tight">
+              💡 <span class="text-cyan-300 font-semibold">GitHub support:</span> Paste any GitHub file link (e.g. <code class="bg-black/40 px-1 rounded text-cyan-300">https://github.com/username/repository/blob/main/model.glb</code>). It will automatically render in 3D!
+            </p>
+          </div>
+
+          <!-- OPTIONAL LOCAL GLB FILE UPLOAD -->
           <div>
-            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Project Photo (Optional)</label>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Upload 3D GLB File directly (Optional)</label>
+            <input type="file" id="input-glb-file" accept=".glb,.gltf" class="w-full text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-cyan-500/20 file:text-cyan-300 hover:file:bg-cyan-500/30" />
+          </div>
+
+          <!-- PROJECT PHOTO -->
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Project Photo / Blueprint Cover (Optional)</label>
             <input type="file" id="input-image" accept="image/*" class="w-full text-xs text-slate-400 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-cyan-500/20 file:text-cyan-300 hover:file:bg-cyan-500/30" />
           </div>
 
@@ -440,7 +405,7 @@
               Cancel
             </button>
             <button type="submit" id="add-modal-submit-btn" class="px-5 py-2 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-display font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5">
-              <i data-lucide="check-circle" class="w-4 h-4"></i> Save to Database
+              <i data-lucide="check-circle" class="w-4 h-4"></i> Save Project
             </button>
           </div>
         </form>
@@ -461,6 +426,19 @@
         fetchProjects();
         setupEventListeners();
       });
+
+      // Format GitHub URL to raw/cdn format so model-viewer can render without CORS block
+      function formatGlbUrl(rawUrl) {
+        if (!rawUrl) return null;
+        let url = rawUrl.trim();
+        if (!url) return null;
+
+        // Converts https://github.com/user/repo/blob/main/file.glb -> https://raw.githubusercontent.com/user/repo/main/file.glb
+        if (url.includes('github.com') && url.includes('/blob/')) {
+          url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+        }
+        return url;
+      }
 
       // Mobile Menu Logic
       const mobileToggle = document.getElementById('mobile-menu-toggle');
@@ -506,9 +484,22 @@
           loadingEl.classList.add('hidden');
           gridEl.innerHTML = `
             <div class="col-span-full py-12 text-center text-rose-400 text-xs">
-              Error connecting to Cloud SQL backend: ${err.message}. Please refresh or try again.
+              Error connecting to database: ${err.message}. Please refresh or try again.
             </div>
           `;
+        }
+      }
+
+      // Delete Project API call
+      async function deleteProject(id) {
+        if (!confirm('Are you sure you want to delete this project?')) return;
+        try {
+          const res = await fetch(`/api/projects/${id}`, { method: 'DELETE' });
+          if (!res.ok) throw new Error('Failed to delete project');
+          closeDetailModal();
+          fetchProjects();
+        } catch(err) {
+          alert('Error deleting project: ' + err.message);
         }
       }
 
@@ -540,29 +531,37 @@
 
         filtered.forEach(p => {
           const card = document.createElement('div');
-          card.className = 'glass-card p-6 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between group cursor-pointer relative hover:-translate-y-1';
+          card.className = 'glass-card p-5 rounded-2xl border border-white/10 hover:border-cyan-400/40 transition-all duration-300 flex flex-col justify-between group relative hover:-translate-y-1';
           card.dataset.id = p.id;
 
           const isPhysical = p.category === 'physical';
           const badgeBg = isPhysical ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-400';
           const icon = isPhysical ? 'box' : 'drafting-compass';
+          const formattedGlb = formatGlbUrl(p.glb);
 
           card.innerHTML = `
             <div>
-              <!-- Image / Visual Banner if available -->
-              ${p.image ? `
-                <div class="w-full h-40 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-white/5">
+              <!-- 3D GLB Model Preview OR Image OR Placeholder -->
+              ${formattedGlb ? `
+                <div class="w-full h-48 rounded-xl overflow-hidden mb-4 bg-slate-950 border border-cyan-500/20 relative group-hover:border-cyan-400/40 transition-colors">
+                  <model-viewer src="${formattedGlb}" auto-rotate camera-controls shadow-intensity="1" class="w-full h-full"></model-viewer>
+                  <div class="absolute top-2 right-2 px-2 py-0.5 rounded bg-black/60 backdrop-blur border border-cyan-400/30 text-[9px] font-mono text-cyan-300 flex items-center gap-1 pointer-events-none">
+                    <i data-lucide="box" class="w-3 h-3"></i> 3D GLB Model
+                  </div>
+                </div>
+              ` : p.image ? `
+                <div class="w-full h-44 rounded-xl overflow-hidden mb-4 bg-slate-900 border border-white/5">
                   <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
               ` : `
-                <div class="w-full h-28 rounded-xl mb-4 bg-gradient-to-br from-slate-900 to-slate-950 border border-white/5 flex items-center justify-center relative overflow-hidden group-hover:border-cyan-500/30 transition-colors">
+                <div class="w-full h-32 rounded-xl mb-4 bg-gradient-to-br from-slate-900 to-slate-950 border border-white/5 flex items-center justify-center relative overflow-hidden group-hover:border-cyan-500/30 transition-colors">
                   <div class="absolute inset-0 opacity-10 cad-bg"></div>
-                  <i data-lucide="${icon}" class="w-8 h-8 text-cyan-400/40 group-hover:text-cyan-400 transition-colors"></i>
+                  <i data-lucide="${icon}" class="w-10 h-10 text-cyan-400/40 group-hover:text-cyan-400 transition-colors"></i>
                 </div>
               `}
 
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded border ${badgeBg}">
+              <div class="flex items-center justify-between mb-2.5">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded border ${badgeBg}">
                   ${isPhysical ? 'Physical Model' : 'AutoCAD Blueprint'}
                 </span>
                 <span class="text-xs font-mono text-slate-400 bg-white/5 px-2 py-0.5 rounded border border-white/5">
@@ -573,7 +572,7 @@
               <h3 class="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors mb-1">
                 ${p.title}
               </h3>
-              <p class="text-xs font-mono text-cyan-400 font-semibold uppercase mb-3">
+              <p class="text-xs font-mono text-cyan-400 font-semibold uppercase mb-2">
                 ${p.subtitle}
               </p>
 
@@ -582,15 +581,34 @@
               </p>
             </div>
 
-            <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-cyan-400">
-              <span class="flex items-center gap-1">
-                <i data-lucide="layers" class="w-3.5 h-3.5"></i> Details & Specs
-              </span>
-              <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            <div class="pt-3 border-t border-white/5 flex items-center justify-between text-xs">
+              <button class="text-cyan-400 font-mono flex items-center gap-1 hover:underline open-detail-btn">
+                <i data-lucide="layers" class="w-3.5 h-3.5"></i> View Details
+              </button>
+              
+              <button class="delete-card-btn p-1.5 rounded-lg border border-rose-500/20 bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-colors" title="Delete Project">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+              </button>
             </div>
           `;
 
-          card.addEventListener('click', () => openDetailModal(p));
+          // Event handlers
+          card.querySelector('.open-detail-btn')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openDetailModal(p);
+          });
+
+          card.querySelector('.delete-card-btn')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            deleteProject(p.id);
+          });
+
+          card.addEventListener('click', (e) => {
+            if (!e.target.closest('model-viewer') && !e.target.closest('button')) {
+              openDetailModal(p);
+            }
+          });
+
           gridEl.appendChild(card);
         });
 
@@ -601,7 +619,7 @@
       function setupEventListeners() {
         // Filter tabs
         document.querySelectorAll('.filter-tab-btn').forEach(btn => {
-          btn.addEventListener('click', (e) => {
+          btn.addEventListener('click', () => {
             document.querySelectorAll('.filter-tab-btn').forEach(b => {
               b.classList.remove('active', 'border-cyan-400/40', 'text-cyan-400', 'bg-cyan-400/10');
               b.classList.add('border-white/10', 'text-slate-400', 'bg-transparent');
@@ -647,6 +665,14 @@
         if (detailCloseBtn) detailCloseBtn.addEventListener('click', closeDetailModal);
         if (detailBackdrop) detailBackdrop.addEventListener('click', closeDetailModal);
 
+        // Delete from Detail Modal
+        const modalDeleteBtn = document.getElementById('modal-delete-btn');
+        if (modalDeleteBtn) {
+          modalDeleteBtn.addEventListener('click', () => {
+            if (activeProject) deleteProject(activeProject.id);
+          });
+        }
+
         // Submit Form
         const addForm = document.getElementById('add-project-form');
         if (addForm) addForm.addEventListener('submit', handleFormSubmit);
@@ -669,9 +695,11 @@
         catBadge.textContent = project.category === 'physical' ? 'Physical Model' : 'AutoCAD Blueprint';
 
         const visualContainer = document.getElementById('modal-visual-container');
-        if (project.glb) {
+        const formattedGlb = formatGlbUrl(project.glb);
+
+        if (formattedGlb) {
           visualContainer.innerHTML = `
-            <model-viewer src="${project.glb}" auto-rotate camera-controls shadow-intensity="1" class="w-full h-64 bg-slate-950 rounded-xl"></model-viewer>
+            <model-viewer src="${formattedGlb}" auto-rotate camera-controls shadow-intensity="1" class="w-full h-72 bg-slate-950 rounded-xl"></model-viewer>
           `;
         } else if (project.image) {
           visualContainer.innerHTML = `
@@ -707,7 +735,7 @@
             await navigator.clipboard.writeText(url);
             document.getElementById('modal-share-text').textContent = 'Link Copied!';
             setTimeout(() => {
-              document.getElementById('modal-share-text').textContent = 'Copy Project Link';
+              document.getElementById('modal-share-text').textContent = 'Share Link';
             }, 2000);
           } catch(e) {
             console.error('Clipboard error:', e);
@@ -743,6 +771,8 @@
         const material = document.getElementById('input-material').value.trim();
         const outcome = document.getElementById('input-outcome').value.trim();
         const description = document.getElementById('input-description').value.trim();
+        const glbUrlInput = document.getElementById('input-glb-url').value.trim();
+        const glbFileInput = document.getElementById('input-glb-file').files[0];
         const imageFile = document.getElementById('input-image').files[0];
 
         if (!title || !subtitle || !category || !scale || !description) {
@@ -753,6 +783,20 @@
 
         submitBtn.disabled = true;
         submitBtn.innerHTML = `<span class="inline-block animate-spin mr-1">⏳</span> Saving...`;
+
+        let glbValue = glbUrlInput ? formatGlbUrl(glbUrlInput) : null;
+        if (glbFileInput) {
+          try {
+            glbValue = await new Promise((resolve, reject) => {
+              const reader = new FileReader();
+              reader.onload = () => resolve(reader.result);
+              reader.onerror = reject;
+              reader.readAsDataURL(glbFileInput);
+            });
+          } catch(err) {
+            console.error('GLB encoding failed:', err);
+          }
+        }
 
         let base64Image = null;
         if (imageFile) {
@@ -781,6 +825,7 @@
               material,
               outcome,
               description,
+              glb: glbValue,
               image: base64Image
             })
           });
@@ -797,7 +842,7 @@
           errorMsg.classList.remove('hidden');
         } finally {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4"></i> Save to Database`;
+          submitBtn.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4"></i> Save Project`;
           if (window.lucide) window.lucide.createIcons();
         }
       }
